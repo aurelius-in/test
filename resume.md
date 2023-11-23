@@ -46,7 +46,7 @@ Experienced Machine Learning Architect and AI/ML Researcher with a comprehensive
 
 ## Technical Skills
 - **Programming Languages:** Python, Java, C++, C#, R, MATLAB, SQL, Scala
-- **Software & Tools:** TensorFlow, PyTorch, Keras, Scikit-Learn, Apache Spark, Hadoop, Unity, Unreal Engine, Jupyter Notebooks, GitHub, Docker, Kubernetes
+- **Software & Tools:** TensorFlow, PyTorch, Keras, Scikit-Learn, Apache Spark, Hadoop, Unity, Unreal Engine, Jupyter Notebooks, GitHub, Docker, Kubernetes, Azure
 
 ## Certifications and Awards
 - **Advanced Tech Award** - Issued by Optum, March 2023
