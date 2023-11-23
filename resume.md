@@ -56,11 +56,11 @@ Experienced Machine Learning Architect and AI/ML Researcher with a comprehensive
   - Army Achievement Medals, Commendation Medals, Good Conduct Medal, Service Ribbon
   - Global War on Terrorism Service Medal, Iraq Campaign Medal (3 Campaign Stars)
   - Meritorious Unit Commendation Medal, NCO Professional Development Ribbon, Overseas Service Ribbons
-- **Skillsoft Certifications**
-  - [List relevant certifications or mention the number and categories]
-
-## Publications
-- Ellison, O.A. (2020). "Innovative Drone Surveillance Techniques." Journal of AI Research.
-
+## Additional Certifications
+- **LinkedIn Certifications in Game Design**
+  - Highlighting skills in interactive design, user engagement, and creative software development.
+- **Skillsoft Certifications in Machine Learning**
+  - Demonstrating advanced skills and continuous learning in AI and machine learning technologies.
+  - 
 ## Personal Statement
 Eager to join Penn State's Doctor of Engineering program, my professional journey encompasses experiences from military service to leading innovative software solutions in business and defense sectors. My goal is to contribute to the advancement of ML applications in healthcare, leveraging my extensive background to drive meaningful improvements in patient care and healthcare systems.
