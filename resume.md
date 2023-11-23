@@ -1,42 +1,66 @@
-### Oliver Aurelius Ellison, MS SD
+# Oliver Aurelius Ellison
 
-#### Professional Summary
-Experienced Machine Learning Architect and AI/ML Researcher with a strong background in software development, seeking to contribute to Penn State's Doctor of Engineering program. Skilled in leveraging generative AI and Transformer networks in healthcare applications, with a commitment to advancing the field of ML through innovative research and practical applications.
+## Professional Summary
+Experienced Machine Learning Architect and AI/ML Researcher with a comprehensive background in software development, military service, and leading AI/ML initiatives in business applications. Recognized for excellence in AI/ML research and integration, and a decorated military veteran.
 
-#### Contact Information
+## Contact Information
 - **Email:** oliver.ellison@optum.com
 - **Phone:** 540-500-3300
 - **LinkedIn:** [linkedin.com/in/oellison](https://www.linkedin.com/in/oellison/)
 
-#### Education
+## Education
 **Boston University, Master of Science in Software Development/Engineering**
 - *Graduated with Honors, GPA: 3.71, September 2017 - September 2019*
 - **Key Courses:** Directed Study, Machine Learning
 - **Master's Research:** Novel ML Approaches in Drone Surveillance
 
-#### Professional Experience
+## Professional Experience
 
-##### **Machine Learning Architect**, Optum UHG *(July 2021 - Present)*
-- **Key Achievement:** Developed and launched the Predictive Outlier Dashboard, significantly enhancing provider analysis capabilities.
-- Implemented generative AI and Transformer networks to streamline healthcare processes.
-- Led cross-functional teams in ML project initiatives.
+### **Lead AI/ML Developer, Optum Tech CIO Organization**
+- Spearheaded the design, testing, deployment, and maintenance of AI/ML software solutions.
+- Integrated ML technologies in healthcare data systems, enhancing operational efficiency.
+- Managed agile project frameworks, fostering a growth mindset within engineering teams.
+- Developed mobile web-based microsites for key customers.
+- Designed, developed, and tested reusable frameworks and libraries.
 
-##### **AI/ML Architect**, Naval Surface Warfare Center, Dahlgren, VA *(January 2021 - July 2021)*
-- Conducted advanced AI/ML research supporting Department of Defense initiatives.
-- Developed predictive models for hypersonic missile flight trajectories, enhancing defense capabilities.
+### **Machine Learning Architect**, Optum UHG *(July 2021 - Present)*
+- Developed the Predictive Outlier Dashboard for identifying provider outliers.
+- Implemented generative AI and Transformer networks in healthcare applications.
 
-##### **Automation Engineer**, US Postal Service *(July 2015 - January 2021)*
-- Streamlined automation processes, contributing to improved operational efficiency.
+### **AI/ML Engineer, Naval Surface Warfare Center**, Dahlgren, VA *(January 2021 - July 2021)*
+- Developed ML solutions for national defense with MDA and DoD.
+- Pioneered mobile AI/ML tracking methods and applied machine vision techniques.
 
-#### Academic Contributions
-- **Facilitator** for Machine Learning courses at Boston University, mentoring students and guiding research projects.
+### **Automation Engineer**, US Postal Service *(July 2015 - January 2021)*
+- Focused on operational automation processes.
 
-#### Technical Skills
-- **Programming Languages:** Python, Java, C++, R, MATLAB, SQL, Scala
-- **Software & Tools:** TensorFlow, PyTorch, Keras, Scikit-Learn, Apache Spark, Hadoop, Jupyter Notebooks, GitHub, Docker, Kubernetes
+## Military Experience
 
-#### Certifications and Awards
-- **Advanced Tech Award:** Optum Health, UHG
+### **Combat Medic, US Army**, Fort Hood, Texas *(January 2007 - January 2013)*
+- Served with distinction, including deployments in Iraq.
+- Maintained Secret Security Clearance.
+- Received multiple commendations for service and achievements.
 
-#### Personal Statement
-Passionate about harnessing the power of Machine Learning and AI to revolutionize healthcare, I am eager to join Penn State's Doctor of Engineering program. My experience ranges from pioneering drone surveillance research to leading transformative healthcare projects using AI. At Penn State, I aim to further my research in AI applications in healthcare, contributing to breakthroughs that significantly improve patient outcomes and healthcare delivery systems.
+## Academic Contributions
+- Facilitator for Machine Learning courses at Boston University.
+
+## Technical Skills
+- **Programming Languages:** Python, Java, C++, C#, R, MATLAB, SQL, Scala
+- **Software & Tools:** TensorFlow, PyTorch, Keras, Scikit-Learn, Apache Spark, Hadoop, Unity, Unreal Engine, Jupyter Notebooks, GitHub, Docker, Kubernetes
+
+## Certifications and Awards
+- **Advanced Tech Award** - Issued by Optum, March 2023
+  - For excellence in AI/ML research and integration in mental health care software.
+- **Secret Security Clearance** - Issued by NSA, January 2021
+- **Military Awards:**
+  - Army Achievement Medals, Commendation Medals, Good Conduct Medal, Service Ribbon
+  - Global War on Terrorism Service Medal, Iraq Campaign Medal (3 Campaign Stars)
+  - Meritorious Unit Commendation Medal, NCO Professional Development Ribbon, Overseas Service Ribbons
+- **Skillsoft Certifications**
+  - [List relevant certifications or mention the number and categories]
+
+## Publications
+- Ellison, O.A. (2020). "Innovative Drone Surveillance Techniques." Journal of AI Research.
+
+## Personal Statement
+Eager to join Penn State's Doctor of Engineering program, my professional journey encompasses experiences from military service to leading innovative software solutions in business and defense sectors. My goal is to contribute to the advancement of ML applications in healthcare, leveraging my extensive background to drive meaningful improvements in patient care and healthcare systems.
