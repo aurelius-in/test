@@ -61,6 +61,6 @@ Experienced Machine Learning Architect and AI/ML Researcher with a comprehensive
   - Highlighting skills in interactive design, user engagement, and creative software development.
 - **Skillsoft Certifications in Machine Learning**
   - Demonstrating advanced skills and continuous learning in AI and machine learning technologies.
-  - 
+   
 ## Personal Statement
 Eager to join Penn State's Doctor of Engineering program, my professional journey encompasses experiences from military service to leading innovative software solutions in business and defense sectors. My goal is to contribute to the advancement of ML applications in healthcare, leveraging my extensive background to drive meaningful improvements in patient care and healthcare systems.
