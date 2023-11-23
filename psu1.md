@@ -33,5 +33,5 @@ The education and praxis research in this program will be instrumental in achiev
 
 Joining this program aligns with my long-term career goal of being at the forefront of integrating AI in healthcare. I am committed to using this opportunity to contribute substantially to the field, aspiring to develop solutions that address critical healthcare challenges. The knowledge and experience I will gain from Penn State’s D.Eng. program are essential for my ambition to transform healthcare practices through innovative technological solutions.
 
-##### Conclusion
+#### Conclusion
 In conclusion, the Doctor of Engineering program at Penn State is not just an academic pursuit but a pivotal step towards realizing my professional aspirations. This program offers the perfect blend of technical learning and leadership development, aligning with my goal of becoming a key contributor to healthcare technology. My commitment to this program and the field of healthcare technology is unwavering, and I am enthusiastic about the opportunity to contribute my skills and knowledge to make a meaningful impact in the healthcare sector.
