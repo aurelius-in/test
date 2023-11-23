@@ -23,3 +23,21 @@ My tenure at the Naval Surface Warfare Center as an AI/ML Engineer further enric
 Furthermore, my service as a Combat Medic in the US Army instilled in me a sense of discipline and resilience. The ability to perform under pressure and adapt to dynamic environments was crucial in the military and remains invaluable in my professional life.
 
 Collectively, these experiences have equipped me with a unique blend of technical expertise, strategic thinking, and leadership skills. These attributes are essential for success in the D.Eng. program and will be instrumental in achieving my professional objectives.
+
+### Praxis Research Overview
+
+My proposed praxis research within Penn State's Doctor of Engineering program will explore the integration of advanced machine learning techniques in mental healthcare. The focus will be on developing a comprehensive system that combines early detection of mental health issues, real-time support through AI-driven chatbots, and a broad analysis of mental health trends via social media data. This multidimensional approach aims to revolutionize the field of mental healthcare, making early intervention and support more accessible and effective.
+
+The importance of early detection in mental health cannot be overstated. By employing sophisticated ML algorithms to analyze patient data, the goal is to identify potential mental health issues before they become critical. This proactive approach has the potential to significantly improve patient outcomes and reduce the long-term costs associated with mental healthcare. The utilization of predictive analytics in this realm is a promising area that can benefit from further research and development.
+
+Developing AI-powered chatbots as a form of immediate mental health support is another cornerstone of my research. These chatbots will be designed to provide real-time, personalized assistance to individuals, offering guidance and support in moments of need. The integration of natural language processing and sentiment analysis will enable these chatbots to understand and respond to the emotional states of users, providing a level of interaction that is both empathetic and helpful.
+
+Analyzing mental health trends through social media and other data sources is the third aspect of my research. By harnessing the vast amounts of data available online, the aim is to gain insights into broader mental health patterns and needs. This analysis can inform healthcare providers and policymakers, leading to better-informed decisions and strategies for addressing mental health challenges at a larger scale.
+
+At Optum UHG, I have the privilege of accessing a wealth of resources, including advanced technologies and a collaborative environment, which will be instrumental in conducting this research. My current role allows me to leverage cutting-edge tools and methodologies, vital for the success of this ambitious project. The support from Optum UHG in terms of data access, technological infrastructure, and expert collaboration will play a critical role in the realization of this research.
+
+#### Conclusion
+
+The opportunity to undertake this praxis research at Penn State, combined with the resources and support from Optum UHG, presents an exciting prospect. This research is not only aligned with my professional goals but also has the potential to make a significant impact in the field of mental healthcare. My commitment to this research is driven by a desire to contribute to the betterment of mental healthcare practices through innovative AI and ML solutions.
+
+Joining Penn State’s Doctor of Engineering program is a strategic step towards realizing these goals. This program is not just an academic pursuit but a pathway to becoming a leader capable of bridging advanced technology with practical applications, particularly in healthcare. I am enthusiastic about the prospect of contributing to the field of healthcare technology through this innovative research and leadership.
