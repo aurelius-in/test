@@ -34,3 +34,15 @@ This study presents a comprehensive evaluation of cutting-edge semi-supervised m
 7. [Future Work](#future-work)
 8. [References](#references)
 9. [Appendix](#appendix)
+
+
+## References
+
+[1] "Risk Prediction of Chronic Diseases with a Two-Stage Semi-Supervised Clustering Method," [Online]. Available: www.sciencedirect.com.
+[2] "Semi-Supervised Learning in Cancer Diagnostics," [Online]. Available: www.ncbi.nlm.nih.gov.
+[3] "A Semi-Supervised Learning Approach to Enhance Health Care Community," [Online]. Available: www.ncbi.nlm.nih.gov.
+[4] "Demystifying Supervised Learning in Healthcare 4.0: A New Reality of...," [Online]. Available: www.ncbi.nlm.nih.gov.
+[5] "A Comparative Analysis of Semi-Supervised Learning: The Case...," [Online]. Available: link.springer.com.
+[6] "Development of Early Prediction Model for Pregnancy-Associated...," [Online]. Available: www.nature.com.
+[7] Julio Jerison E Macrohon et al., "A Semi-Supervised Machine Learning Approach in Predicting High-Risk Pregnancies in the Philippines," Diagnostics (Basel), vol. 6, no. 1346–1352, 2022. [Online]. Available: pubmed.ncbi.nlm.nih.gov.
+[8] Rayan Krishnan et al., "Self-Supervised Learning in Medicine and Healthcare," Nature Biomedical Engineering, vol. 6, 2022. [Online]. Available: www.nature.com.
