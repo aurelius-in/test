@@ -55,6 +55,16 @@ The ongoing advancements in semi-supervised machine learning thus represent a si
 
 The primary objective of this study is to harness the potential of semi-supervised learning in improving healthcare risk assessment, particularly in the analysis of BH provider claims data. Recent advancements in clinical cancer research have demonstrated the effectiveness of semi-supervised learning methods in overcoming the challenges posed by small sample sizes and censored data, common in healthcare datasets [9]. By implementing a novel semi-supervised approach, this research aims to significantly increase the available training samples, enhance the identification of risk classes, and improve the predictive accuracy for healthcare outcomes [10]. The application of these methods in the context of BH provider claims data is expected to yield more accurate risk assessments, contributing to the broader goal of enhancing patient care and treatment strategies in healthcare.
 
+## Scope of the Study
+
+The scope of this study encompasses the application of semi-supervised machine learning techniques to enhance risk assessment in behavioral health (BH) provider claims data. Recognizing the complexities inherent in healthcare data, particularly the prevalence of unlabeled data, this study aims to utilize semi-supervised learning as a means to leverage both labeled and unlabeled data effectively. This approach is particularly pertinent in the context of BH claims data, where the volume of unlabeled data is substantial, and the labeling process can be resource-intensive.
+
+In recent research, semi-supervised learning has been shown to be highly effective in medical imaging, where it allows for the cooperative use of both labeled and unlabeled data. For example, in the context of COVID-19 diagnosis using CT images, semi-supervised learning has been utilized to improve diagnostic accuracy and robustness, demonstrating the method's potential in handling complex patterns in medical data [11]. This study seeks to explore similar applications in the analysis of BH provider claims, with the goal of identifying risk factors and patterns more efficiently and accurately.
+
+The study will focus on evaluating various semi-supervised learning models and techniques, assessing their performance in the context of BH provider claims data. By doing so, it aims to contribute to the broader effort of enhancing patient care and management in the healthcare sector.
+
+
+
 ## References
 
 - [1] "Risk Prediction of Chronic Diseases with a Two-Stage Semi-Supervised Clustering Method," [Online]. Available: www.sciencedirect.com.
@@ -67,3 +77,4 @@ The primary objective of this study is to harness the potential of semi-supervis
 - [8] Rayan Krishnan et al., "Self-Supervised Learning in Medicine and Healthcare," Nature Biomedical Engineering, vol. 6, 2022. [Online]. Available: www.nature.com.
 - [9]: Yong Liang et al., "Cancer survival analysis using semi-supervised learning method based on Cox and AFT models with L1/2 regularization," BMC Medical Genomics, 2016. [Online]. Available: bmcmedgenomics.biomedcentral.com.
 - [10]: "The advantages of our proposed semi-supervised learning method," BMC Medical Genomics, 2016. [Online]. Available: bmcmedgenomics.biomedcentral.com.
+- [11]: Chang Hee Han et al., "Semi-supervised learning for an improved diagnosis of COVID-19 in CT images," PLoS ONE, 2021. [Online]. Available: journals.plos.org.
