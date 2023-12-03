@@ -12,7 +12,7 @@ This study presents a comprehensive evaluation of cutting-edge semi-supervised m
    - [Scope of the Study](#scope-of-the-study)
 2. [Literature Review](#literature-review)
 3. [Methodology](#methodology)
-   - [Data Collection](#data-collection)
+   - [Data Collection and Preprocessing](#data-collection-and-preprocessing)
    - [Preprocessing](#preprocessing)
    - [Model Selection Criteria](#model-selection-criteria)
 4. [Experimental Setup](#experimental-setup)
