@@ -13,7 +13,7 @@ This study presents a comprehensive evaluation of cutting-edge semi-supervised m
 2. [Literature Review](#literature-review)
 3. [Methodology](#methodology)
    - [Data Collection and Preprocessing](#data-collection-and-preprocessing)
-   - [Preprocessing](#preprocessing)
+   - [Advanced Machine Learning Techniques](#Advanced-Machine-Learning-Techniques)
    - [Model Selection Criteria](#model-selection-criteria)
 4. [Experimental Setup](#experimental-setup)
    - [Deep Learning with Autoencoders](#deep-learning-with-autoencoders)
