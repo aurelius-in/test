@@ -41,7 +41,7 @@ This study presents a comprehensive evaluation of cutting-edge semi-supervised m
 
 The exploration of semi-supervised machine learning (ML) in healthcare has opened new avenues in risk assessment and predictive analysis. This is particularly relevant in the context of chronic diseases, where the ability to categorize individuals into different risk groups plays a crucial role in healthcare management and treatment strategies. For instance, a two-stage semi-supervised K-Means clustering approach has shown effectiveness in identifying underlying risks for conditions such as cardiovascular diseases (CVD) and diabetes [1]. 
 
-Semi-supervised learning, sitting at the intersection between unsupervised and supervised learning, is uniquely positioned to tackle challenges in healthcare data, which often involves a mix of labeled and unlabeled datasets. This approach is especially beneficial in scenarios where data labeling is resource-intensive or where labeled data is scarce [2]. The versatility of semi-supervised methods is evident in various healthcare applications, from enhancing community health care initiatives [3] to improving the accuracy of disease detection and classification [4].
+Semi-supervised learning, sitting at the intersection between unsupervised and supervised learning, is uniquely positioned to tackle challenges in healthcare data, which often involves a mix of labeled and unlabeled datasets. This approach is especially beneficial in scenarios where data labeling is resource-intensive or where labeled data is scarce [2]. The versatility of semi-supervised methods is evident in various healthcare applications, from enhancing community health care initiatives - [3] to improving the accuracy of disease detection and classification [4].
 
 Recent developments in semi-supervised learning have demonstrated its potential to significantly reduce human effort, particularly in tasks like medical systematic review creation, even with limited training datasets [5]. In the realm of maternal healthcare, for instance, graph-based semi-supervised learning has been effectively used for early risk prediction in pregnancies, showcasing the methodology's strength in handling complex healthcare datasets [6]. 
 
@@ -119,43 +119,64 @@ The development of hybrid models, integrating machine learning techniques with t
 # Methodology
 
 ## Data Collection and Preprocessing
-Our study commenced with the collection of behavioral health (BH) provider claims data, encompassing hundreds of thousands of providers. The dataset primarily consisted of unlabeled data, with only a few dozen providers labeled with case statuses such as 'open', 'closed', 'closed with findings', and 'closed without findings', along with associated comments. The data featured 110 columns, representing various attributes and metrics relevant to provider risk assessment.
+Our study initiated with the collection of a vast dataset of behavioral health (BH) provider claims, encompassing hundreds of thousands of providers. The dataset predominantly consisted of unlabeled data, with a sparse number of providers labeled with various case statuses and detailed comments. This dataset included 110 feature columns, each representing different attributes crucial for risk assessment.
 
-To prepare the data for analysis, we employed Natural Language Processing (NLP) techniques, specifically utilizing BERT (Bidirectional Encoder Representations from Transformers) and Large Language Models (LLMs), to interpret and pre-weight the significance of each column based on the semantic understanding of column names and comments. This preprocessing step was crucial for enhancing the subsequent machine learning models' ability to discern patterns and anomalies in the data [28].
+### Feature Preprocessing with LLMs
+To enhance the interpretability and relevance of these features, we employed Large Language Models (LLMs) for semantic analysis and preprocessing. Each feature column underwent analysis using LLMs to assign a contextual significance score, reflecting its relative importance in risk assessment. Additionally, LLMs generated explanatory text outputs, providing insights into the rationale behind each feature's weighting, thereby enhancing the transparency and interpretability of the model [28].
 
-## Generative Data Augmentation
-Given the scarcity of labeled data, we utilized Generative Adversarial Networks (GANs) to generate synthetic data, thereby addressing the issue of data imbalance. This synthetic data was used to augment our training dataset, ensuring a more robust and comprehensive learning process for the models [29].
+## Advanced Machine Learning Techniques
+### Isolation Forest for Anomaly Detection
+We utilized Isolation Forest, an effective anomaly detection algorithm, to identify outliers and unusual patterns within the BH provider data. This method was particularly useful in flagging potential high-risk providers based on atypical claim patterns - [39].
+
+### Deep Learning with Autoencoders
+Variational Autoencoders (VAEs) were central to our methodology, employed for their proficiency in learning complex data representations. We also experimented with stacking K-means clustering with autoencoders to enhance the feature extraction process, enabling a more nuanced understanding of inherent data clusters - [30].
+
+### Transformers for Sequential Data Analysis
+Transformers were applied to analyze temporal patterns in claims data, allowing for a more dynamic assessment of provider behavior over time [40].
+
+### Generative Data Augmentation with GANs
+Generative Adversarial Networks (GANs) played a crucial role in data augmentation, particularly in addressing the scarcity of labeled data. By generating synthetic yet realistic data samples, GANs enriched our training dataset [29].
+
+### Quadratic Discriminant Analysis (QDA)
+QDA was employed as a statistical technique to differentiate between different risk categories, modeling the variance in each category [41].
+
+### Random Forest for Feature Importance
+Random Forest algorithms were utilized for their strength in feature importance analysis, identifying the most predictive features in the dataset [42].
+
+### Novel Ensemble Methods
+#### Stacked Ensemble Approach
+We developed a novel stacked ensemble approach, combining the strengths of various models, including autoencoders, QDA, and Random Forest. This method involved using the outputs of individual models as inputs for a final meta-model, which provided a comprehensive risk assessment score.
+
+#### Hybrid Isolation Forest and Autoencoder Model
+A hybrid model combining the Isolation Forest with autoencoders was developed, leveraging the anomaly detection capabilities of the Isolation Forest and the feature representation strengths of autoencoders.
 
 ## Semi-Supervised Learning Models
-### Deep Learning with Autoencoders
-We experimented with Variational Autoencoders (VAEs) for their proficiency in learning data representations and handling unlabeled datasets. VAEs were trained to encode and decode the provider data, enabling the model to learn a generative representation of the dataset [30].
-
 ### Graph Neural Networks (GNNs)
-GNNs were evaluated for their ability to capture relational data structures within the BH provider network. This approach allowed us to model the interconnected nature of healthcare systems and the relational dependencies among providers [31].
+GNNs were evaluated for their ability to capture relational data structures within the BH provider network - [31].
 
 ### Self-Training and Pseudo-Labeling
-We implemented self-training and pseudo-labeling techniques to enhance the training process. These methods involved using model predictions to generate pseudo-labels for unlabeled data, which were then used to retrain the models, thereby improving their accuracy with limited labeled data [32].
+Self-training and pseudo-labeling techniques were implemented to enhance the training process with limited labeled data - [32].
 
 ### Transfer Learning and Pre-trained Models
-We explored the potential of transfer learning and pre-trained models to leverage existing large datasets for fine-tuning our specific risk assessment task. This approach allowed us to utilize the knowledge gained from other domains to enhance the performance of our models on the BH provider data [33].
+We explored transfer learning and pre-trained models to leverage existing large datasets for fine-tuning our specific risk assessment task - [33].
 
 ### Ensemble Learning and Multi-view Learning
-Ensemble learning and multi-view learning methods were employed to improve prediction robustness. These techniques involved combining predictions from multiple models and perspectives to achieve more reliable and accurate risk assessments [34].
+Ensemble learning and multi-view learning methods were employed to improve prediction robustness - [34].
 
 ### Few-shot and Zero-shot Learning
-We scrutinized few-shot and zero-shot learning approaches for their applicability in scenarios with minimal labeled examples. These methods enabled our models to make predictions on new, unseen data categories using very few or no labeled training examples [35].
+Few-shot and zero-shot learning approaches were scrutinized for their applicability in scenarios with minimal labeled examples - [35].
 
 ### Active Learning
-Active learning strategies were incorporated to iteratively select informative data points for labeling. This approach was particularly beneficial in our resource-constrained environment, allowing us to efficiently utilize our limited labeled data [36].
+Active learning strategies were incorporated to iteratively select informative data points for labeling - [36].
 
 ### Reinforcement Learning
-The adaptability of reinforcement learning was investigated in dynamic risk assessment scenarios. This method enabled our models to learn optimal strategies through trial and error, adapting to changing data patterns over time [37].
+The adaptability of reinforcement learning was investigated in dynamic risk assessment scenarios - [37].
 
 ### Hybrid Models
-Lastly, we examined hybrid models that amalgamate various techniques, including deep learning and traditional statistical methods. These models were designed to leverage the strengths of multiple approaches to achieve superior performance in provider risk assessment [38].
+Hybrid models that amalgamate various techniques, including deep learning and traditional statistical methods, were examined - [38].
 
 ## Comparative Analysis and Risk Scoring
-Each model was trained and evaluated to assign a risk score to each of the hundreds of thousands of providers. We analyzed the relationships between each feature column and the risk score from each model to derive Mutual Information (MI) scores and feature correlations. These analyses provided insights into the most influential factors in determining provider risk and helped refine the risk scoring mechanism.
+A detailed comparative analysis was conducted to evaluate the performance of each model and technique. Risk scores were assigned to each provider based on a combination of model outputs, feature importance scores, and anomaly detection results. Mutual Information (MI) scores and feature correlations were analyzed to understand the interdependencies among different risk factors.
 
 ## References
 
@@ -197,3 +218,7 @@ Each model was trained and evaluated to assign a risk score to each of the hundr
 - [36]: "Active Learning Literature Survey," [Online]. Available: cs.wisc.edu/~jerryzhu/pub/sslic.pdf.
 - [37]: "Reinforcement Learning: An Introduction," [Online]. Available: mitpress.mit.edu/books/reinforcement-learning-second-edition.
 - [38]: "Hybrid Models for Deep Learning," [Online]. Available: nature.com/articles/s41598-019-47256-0.
+- [39]: "Isolation Forest," [Online]. Available: cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf.
+- [40]: "Attention Is All You Need," [Online]. Available: arxiv.org/abs/1706.03762.
+- [41]: "Quadratic Discriminant Analysis," [Online]. Available: link.springer.com/referenceworkentry/10.1007/978-0-387-30164-8_659.
+- [42]: "Random Forests," [Online]. Available: link.springer.com/article/10.1023/A:1010933404324.
