@@ -51,6 +51,10 @@ Moreover, the growing field of self-supervised learning, a subset of semi-superv
 
 The ongoing advancements in semi-supervised machine learning thus represent a significant stride in the realm of healthcare, promising enhanced predictive capabilities and more personalized treatment approaches.
 
+## Objective
+
+The primary objective of this study is to harness the potential of semi-supervised learning in improving healthcare risk assessment, particularly in the analysis of BH provider claims data. Recent advancements in clinical cancer research have demonstrated the effectiveness of semi-supervised learning methods in overcoming the challenges posed by small sample sizes and censored data, common in healthcare datasets [9]. By implementing a novel semi-supervised approach, this research aims to significantly increase the available training samples, enhance the identification of risk classes, and improve the predictive accuracy for healthcare outcomes [10]. The application of these methods in the context of BH provider claims data is expected to yield more accurate risk assessments, contributing to the broader goal of enhancing patient care and treatment strategies in healthcare.
+
 ## References
 
 - [1] "Risk Prediction of Chronic Diseases with a Two-Stage Semi-Supervised Clustering Method," [Online]. Available: www.sciencedirect.com.
@@ -61,3 +65,5 @@ The ongoing advancements in semi-supervised machine learning thus represent a si
 - [6] "Development of Early Prediction Model for Pregnancy-Associated...," [Online]. Available: www.nature.com.
 - [7] Julio Jerison E Macrohon et al., "A Semi-Supervised Machine Learning Approach in Predicting High-Risk Pregnancies in the Philippines," Diagnostics (Basel), vol. 6, no. 1346–1352, 2022. [Online]. Available: pubmed.ncbi.nlm.nih.gov.
 - [8] Rayan Krishnan et al., "Self-Supervised Learning in Medicine and Healthcare," Nature Biomedical Engineering, vol. 6, 2022. [Online]. Available: www.nature.com.
+- [9]: Yong Liang et al., "Cancer survival analysis using semi-supervised learning method based on Cox and AFT models with L1/2 regularization," BMC Medical Genomics, 2016. [Online]. Available: bmcmedgenomics.biomedcentral.com.
+- [10]: "The advantages of our proposed semi-supervised learning method," BMC Medical Genomics, 2016. [Online]. Available: bmcmedgenomics.biomedcentral.com.
