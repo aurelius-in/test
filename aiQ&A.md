@@ -1,7 +1,7 @@
 ### K-means Autoencoders/Neuroclusters Notebook
 #### Why we used the distance as the risk score
 
-**A:** The use of the distance metric as a risk score in the K-means Autoencoders/Neuroclusters notebook is a strategic choice rooted in the principles of unsupervised learning and anomaly detection. This approach is based on two key concepts: cluster analysis and the nature of autoencoders.
+The use of the distance metric as a risk score in the K-means Autoencoders/Neuroclusters notebook is a strategic choice rooted in the principles of unsupervised learning and anomaly detection. This approach is based on two key concepts: cluster analysis and the nature of autoencoders.
 
 1. **Cluster Analysis with K-means:**
    - **K-means Clustering:** In our context, K-means clustering is used to identify groups (clusters) of data points (provider claims) with similar characteristics. Each cluster represents a pattern or a typical behavior within the claims data.
@@ -19,7 +19,7 @@
 In summary, the distance metric in this model is not just a simple measure of spatial separation; it's a sophisticated, data-driven approach to identifying risks in provider claims data. By leveraging the strengths of K-means clustering and the pattern recognition capabilities of autoencoders, we can effectively highlight claims that warrant further scrutiny due to their deviation from typical patterns.
 
 ### VAE Notebook
-**Q:** Why use normalized reconstruction-error as the risk score?
+#### Why we used normalized reconstruction-error as the risk score
 
 **A:** The decision to use normalized reconstruction-error from a Variational Autoencoder (VAE) as a risk score is rooted in the statistical and computational foundations of VAEs, particularly in the context of anomaly detection and risk assessment in claims data. Here's a more detailed scientific explanation:
 
