@@ -1,5 +1,5 @@
 ### K-means Autoencoders/Neuroclusters Notebook
-Why we the distance as the risk score?
+#### Why we used the distance as the risk score
 
 **A:** The use of the distance metric as a risk score in the K-means Autoencoders/Neuroclusters notebook is a strategic choice rooted in the principles of unsupervised learning and anomaly detection. This approach is based on two key concepts: cluster analysis and the nature of autoencoders.
 
