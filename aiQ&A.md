@@ -9,13 +9,13 @@
 9. The experiments of trying many different classification/clustering methods on the same set of data suggest that the differences in performance are small enough or even negligible, and that Catboost is still among the best performing models. This finding is consistent with my past experiences. For this I strongly believe moving forward we should not to explore more algorithms but rather focusing on making the most out of the data (use LLM to give weights to features, convert categorical/notes/date type to numerical values, incorporating PPA reports).   
 10. If you are interested in figure out the optimal subset of features, there are ways to perform feature selection in a less manual way that you are doing now and avoid data leakage, such as nested models, forward/backward selection, LASSO/Ridge penalization, dropout. I, however, don’t think trying a bunch of feature selection techniques now should be the priority, we’ll get to this when the dimension is much higher for example when incorporating the PPA reports.
 
-### *Q. For the K-means Autoencoders/Neuroclusters notebook, could you explain why you set the distance as the risk score?*
+### *Q1. For the K-means Autoencoders/Neuroclusters notebook, could you explain why you set the distance as the risk score?*
 
 ### Why we set the distance as the risk score:
 
 ##### K-means Autoencoders/Neuroclusters Notebook
 
-**A!:** The use of the distance metric as a risk score in the K-means Autoencoders/Neuroclusters notebook is a strategic choice rooted in the principles of unsupervised learning and anomaly detection. This approach is based on two key concepts: cluster analysis and the nature of autoencoders.
+The use of the distance metric as a risk score in the K-means Autoencoders/Neuroclusters notebook is a strategic choice rooted in the principles of unsupervised learning and anomaly detection. This approach is based on two key concepts: cluster analysis and the nature of autoencoders.
 
 1. **Cluster Analysis with K-means:**
    - **K-means Clustering:** In our context, K-means clustering is used to identify groups (clusters) of data points (provider claims) with similar characteristics. Each cluster represents a pattern or a typical behavior within the claims data.
