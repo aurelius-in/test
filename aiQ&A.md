@@ -1,19 +1,15 @@
-
-
-3. For the stacking/ensemble notebook (Comprehensive_Strategy.ipynb) I think it would make more sense to use a second-layer model that takes in the risk scores as input features and product a final prediction, to assign weights for each sub-model, instead of averaging (giving equal weights to the sub-models). However stacking has shown to be prone to data leakage if not done properly and the performance gain is too small to not worth doing it given the time and computational resources going into stacking.
-4. How do you know the LLM gives correct/reasonable risk values for the columns? We need an evaluation of the LLM which also means talking with the PM team.
-5. ‘In-network’ column is probably already in the feature set, being one-hot encoded. Why are the assigned scores for Y. N, and U 0.6 - 0.8 - 0.9? Sounds a bit arbitrary to me.
-5. The weights for the state is a nice idea but need the PM’s review.
-6. When using any methods to generate synthetic data/address class imbalance, you should evaluate on the hold-out test set. First, you split the data into training - evaluation - testing sets Then you apply the class imbalance methods (SMOTE, ROSE, 7. upsampling, downsampling, etc.) on the training data, then evaluate model performance on the evaluation set to find out the best method, then apply the chosen method on the holdout testing set. This is also how fine-tuning should work: You use the evaluation set to select no. epochs, no. layers, etc., and you only use the test set as the last step to generate a final model score — you don’t use it to go back and change some settings and see if that setting helps you gain a better performance.
-8. Regarding classification performance metrics, accuracy is commonly used but it’s only good when the label ratio is balanced. Focus on F1, AUPRC, precision instead. I also highly recommend using cross-validation instead of just a single split to get an understanding of uncertainty in the performance number.
-9. The experiments of trying many different classification/clustering methods on the same set of data suggest that the differences in performance are small enough or even negligible, and that Catboost is still among the best performing models. This finding is consistent with my past experiences. For this I strongly believe moving forward we should not to explore more algorithms but rather focusing on making the most out of the data (use LLM to give weights to features, convert categorical/notes/date type to numerical values, incorporating PPA reports).   
-10. If you are interested in figure out the optimal subset of features, there are ways to perform feature selection in a less manual way that you are doing now and avoid data leakage, such as nested models, forward/backward selection, LASSO/Ridge penalization, dropout. I, however, don’t think trying a bunch of feature selection techniques now should be the priority, we’ll get to this when the dimension is much higher for example when incorporating the PPA reports.
+### *Q5. The weights for the state is a nice idea but need the PM’s review.*
+### *Q6. When using any methods to generate synthetic data/address class imbalance, you should evaluate on the hold-out test set. First, you split the data into training - evaluation - testing sets Then you apply the class imbalance methods (SMOTE, ROSE...*
+### *Q7. upsampling, downsampling, etc.) on the training data, then evaluate model performance on the evaluation set to find out the best method, then apply the chosen method on the holdout testing set. This is also how fine-tuning should work: You use the evaluation set to select no. epochs, no. layers, etc., and you only use the test set as the last step to generate a final model score — you don’t use it to go back and change some settings and see if that setting helps you gain a better performance.*
+### *Q8. Regarding classification performance metrics, accuracy is commonly used but it’s only good when the label ratio is balanced. Focus on F1, AUPRC, precision instead. I also highly recommend using cross-validation instead of just a single split to get an understanding of uncertainty in the performance number.*
+### *Q9. The experiments of trying many different classification/clustering methods on the same set of data suggest that the differences in performance are small enough or even negligible, and that Catboost is still among the best performing models. This finding is consistent with my past experiences. For this I strongly believe moving forward we should not to explore more algorithms but rather focusing on making the most out of the data (use LLM to give weights to features, convert categorical/notes/date type to numerical values, incorporating PPA reports).*  
+### *Q10. If you are interested in figure out the optimal subset of features, there are ways to perform feature selection in a less manual way that you are doing now and avoid data leakage, such as nested models, forward/backward selection, LASSO/Ridge penalization, dropout. I, however, don’t think trying a bunch of feature selection techniques now should be the priority, we’ll get to this when the dimension is much higher for example when incorporating the PPA reports.*
 
 ### *Q1. For the K-means Autoencoders/Neuroclusters notebook, could you explain why you set the distance as the risk score?*
 
 ### Why we set the distance as the risk score:
 
-##### K-means Autoencoders/Neuroclusters Notebook
+##### (K-means Autoencoders/Neuroclusters Notebook)
 
 The use of the distance metric as a risk score in the K-means Autoencoders/Neuroclusters notebook is a strategic choice rooted in the principles of unsupervised learning and anomaly detection. This approach is based on two key concepts: cluster analysis and the nature of autoencoders.
 
@@ -22,22 +18,25 @@ The use of the distance metric as a risk score in the K-means Autoencoders/Neuro
    - **Centroids as Norms:** The centroids of these clusters represent the 'average' or 'typical' claim within each group. They are the central points around which the data points in a cluster are aggregated.
    - **Distance as Deviation:** The distance of a particular data point from its nearest centroid is a measure of how much that claim deviates from the 'typical' patterns. The greater the distance, the more the claim differs from the common patterns within its cluster.
 
-Q2. For the VAE notebook, why did you set the normalized reconstruction-error as the risk score?
+### *Q2. For the stacking/ensemble notebook (Comprehensive_Strategy.ipynb) I think it would make more sense to use a second-layer model that takes in the risk scores as input features and product a final prediction, to assign weights for each sub-model, instead of averaging (giving equal weights to the sub-models). However stacking has shown to be prone to data leakage if not done properly and the performance gain is too small to not worth doing it given the time and computational resources going into stacking.*
+### Why we set the normalized reconstruction-error as the risk score (Comprehensive_Strategy notebook)
 2. **Role of Autoencoders:**
    - **Dimensionality Reduction:** Autoencoders are used to reduce the dimensionality of the claims data, simplifying the clustering process. They encode the high-dimensional data into a lower-dimensional latent space, capturing the most salient features.
    - **Reconstruction and Anomaly Detection:** The reconstruction error (the difference between the original data and its reconstruction from the encoded latent space) is an effective measure in anomaly detection. In our model, this error aids in identifying claims that are not well-represented by the typical patterns learned by the autoencoder.
 
-3. **Risk Scoring:**
+### *Q3. How do you know the LLM gives correct/reasonable risk values for the columns? We need an evaluation of the LLM which also means talking with the PM team.*
+
+**Risk Scoring:**
    - **Quantifying Risk:** By measuring the distance from centroids in the reduced feature space, we can quantify the 'risk' associated with each claim. A higher distance indicates a claim that is significantly different from the 'normal' patterns, flagging it as a potential risk.
    - **Neuroclusters for Enhanced Analysis:** The integration of neural networks (autoencoders) with K-means (hence 'Neuroclusters') enhances this analysis. It allows for a more sophisticated, non-linear interpretation of the data, providing a nuanced view of what constitutes an anomalous or risky claim.
 
 In summary, the distance metric in this model is not just a simple measure of spatial separation; it's a sophisticated, data-driven approach to identifying risks in provider claims data. By leveraging the strengths of K-means clustering and the pattern recognition capabilities of autoencoders, we can effectively highlight claims that warrant further scrutiny due to their deviation from typical patterns.
 
+### *Q4. ‘In-network’ column is probably already in the feature set, being one-hot encoded. Why are the assigned scores for Y. N, and U 0.6 - 0.8 - 0.9? Sounds a bit arbitrary to me.*
 
-##### VAE Notebook
-**Q:** Why use normalized reconstruction-error as the risk score?
+### Why we normalized reconstruction-error as the risk score (VAE Notebook)
 
-**A:** The decision to use normalized reconstruction-error from a Variational Autoencoder (VAE) as a risk score is rooted in the statistical and computational foundations of VAEs, particularly in the context of anomaly detection and risk assessment in claims data. Here's a more detailed scientific explanation:
+The decision to use normalized reconstruction-error from a Variational Autoencoder (VAE) as a risk score is rooted in the statistical and computational foundations of VAEs, particularly in the context of anomaly detection and risk assessment in claims data. Here's a more detailed scientific explanation:
 
 1. **Fundamentals of VAE:**
    - **Variational Autoencoders:** VAEs are a type of generative model that learn to encode and decode data in a way that the encoded representation can be used to generate new data similar to the original dataset. They consist of two main parts: an encoder that maps input data to a latent (hidden) space, and a decoder that reconstructs the data from this latent space.
