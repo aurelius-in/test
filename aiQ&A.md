@@ -105,9 +105,9 @@ In summary, ensuring the correctness of LLM-derived risk values in our context i
 
 
 ### ‘In-network’ Column Scores
-**Q:** Concern about arbitrary scores for the 'In-network' column.
+#### Concern about arbitrary scores for the 'In-network' column.
 
-**A:** The initial assignment of scores to the 'In-network' column (Y, N, U as 0.6, 0.8, 0.9) was a preliminary heuristic approach. Recognizing the need for a more scientifically grounded method, we are planning to enhance this aspect through empirical analysis and expert consultation. Here's a detailed explanation of our revised approach:
+###### The initial assignment of scores to the 'In-network' column (Y, N, U as 0.6, 0.8, 0.9) was a preliminary heuristic approach. Recognizing the need for a more scientifically grounded method, we are planning to enhance this aspect through empirical analysis and expert consultation. Here's a detailed explanation of our revised approach:
 
 1. **Empirical Analysis for Score Determination:**
    - **Data-Driven Approach:** Instead of relying on heuristics, we will employ a data-driven method to determine the scores. This involves analyzing historical claims data to understand the correlation between 'In-network' status and claim risk.
@@ -133,9 +133,9 @@ In summary, transitioning from a heuristic-based approach to a more empirical an
 
 
 ### State Weights
-**Q:** Need for PM review on state weights.
+#### Need for PM review on state weights.
 
-**A:** The concept of assigning weights to the state feature in our model is an initiative to capture geographical variations in risk assessment. This approach acknowledges that healthcare claims and risks can vary significantly across different states due to various factors. Here's a detailed scientific perspective on this approach:
+###### The concept of assigning weights to the state feature in our model is an initiative to capture geographical variations in risk assessment. This approach acknowledges that healthcare claims and risks can vary significantly across different states due to various factors. Here's a detailed scientific perspective on this approach:
 
 1. **Geographical Variability in Healthcare Claims:**
    - **State-Specific Factors:** Different states have unique healthcare policies, demographic profiles, prevalence of certain diseases, and healthcare provider practices. These factors can influence the risk profile of healthcare claims.
@@ -165,9 +165,9 @@ In conclusion, incorporating state weights into our risk assessment model is a s
 
 
 ### Handling Class Imbalance
-**Q:** Addressing class imbalance and evaluation on hold-out test set.
+#### Addressing class imbalance and evaluation on hold-out test set.
 
-**A:** Addressing class imbalance in our dataset is critical for ensuring the robustness and fairness of our model. Class imbalance occurs when the distribution of classes in a dataset is not uniform, often leading to biased predictions favoring the majority class. Here's a detailed scientific approach to how we plan to handle this issue:
+###### Addressing class imbalance in our dataset is critical for ensuring the robustness and fairness of our model. Class imbalance occurs when the distribution of classes in a dataset is not uniform, often leading to biased predictions favoring the majority class. Here's a detailed scientific approach to how we plan to handle this issue:
 
 1. **Understanding Class Imbalance:**
    - **Impact on Model Performance:** Class imbalance can lead to models that are overly biased towards the majority class, resulting in poor performance on the minority class, which is often of greater interest in risk assessment.
@@ -197,9 +197,9 @@ In conclusion, handling class imbalance is a multifaceted process that involves 
 
 
 ### Classification Performance Metrics
-**Q:** Emphasizing F1, AUPRC, and precision over accuracy.
+#### Emphasizing F1, AUPRC, and precision over accuracy.
 
-**A:** Your emphasis on using F1 score, AUPRC (Area Under the Precision-Recall Curve), and precision, instead of solely relying on accuracy, aligns with best practices in machine learning, especially in scenarios involving imbalanced datasets. Here’s an in-depth scientific rationale for this approach:
+###### Your emphasis on using F1 score, AUPRC (Area Under the Precision-Recall Curve), and precision, instead of solely relying on accuracy, aligns with best practices in machine learning, especially in scenarios involving imbalanced datasets. Here’s an in-depth scientific rationale for this approach:
 
 1. **Limitations of Accuracy:**
    - **Skewed by Imbalance:** Accuracy measures the proportion of true results (both true positives and true negatives) among the total number of cases examined. In imbalanced datasets, accuracy can be misleading as it might reflect the underlying class distribution rather than the model’s ability to classify correctly.
@@ -229,9 +229,9 @@ In conclusion, focusing on F1 score, AUPRC, and precision over accuracy, coupled
 
 
 ### Catboost and Data Utilization
-**Q:** Suggestion on focusing on data utilization over exploring new algorithms.
+#### Suggestion on focusing on data utilization over exploring new algorithms.
 
-**A:** Your suggestion to focus on optimizing data utilization rather than continually exploring new algorithms is a strategic decision informed by the principles of machine learning and model efficiency. Here’s a detailed scientific rationale for this approach, particularly in the context of our work with Catboost and other data optimization strategies:
+###### Your suggestion to focus on optimizing data utilization rather than continually exploring new algorithms is a strategic decision informed by the principles of machine learning and model efficiency. Here’s a detailed scientific rationale for this approach, particularly in the context of our work with Catboost and other data optimization strategies:
 
 1. **Efficacy of Catboost:**
    - **Algorithm Strengths:** Catboost is known for its handling of categorical data and robustness against overfitting, making it particularly effective for diverse datasets like ours.
@@ -262,9 +262,9 @@ In conclusion, focusing on enhancing data utilization aligns with the scientific
 
 
 ### Feature Selection
-**Q:** Addressing feature selection and avoiding data leakage.
+#### Addressing feature selection and avoiding data leakage.
 
-**A:** Your emphasis on adopting systematic methods for feature selection is essential for creating a robust and reliable model, especially as we integrate more complex data sources like PPA reports. Here's a detailed scientific explanation of the feature selection methods we plan to employ:
+###### Your emphasis on adopting systematic methods for feature selection is essential for creating a robust and reliable model, especially as we integrate more complex data sources like PPA reports. Here's a detailed scientific explanation of the feature selection methods we plan to employ:
 
 1. **Nested Models:**
    - **Layered Approach:** Nested models involve a model within a model. The inner model performs feature selection, and the outer model evaluates the performance of the feature set selected by the inner model. This approach helps in validating the effectiveness of the selected features.
@@ -295,9 +295,9 @@ In summary, employing systematic methods like nested models, forward/backward se
 
 
 ### Handling Zeros and NANs
-**Q:** Recommendation on handling missing data.
+#### Recommendation on handling missing data.
 
-**A:** Effectively handling missing data (zeros and NANs) is a fundamental aspect of preparing a dataset for analysis, especially in complex datasets like healthcare claims. Inadequate handling of missing data can lead to biased estimates and misleading conclusions. Here’s a detailed scientific explanation of our approach to handling missing data:
+###### Effectively handling missing data (zeros and NANs) is a fundamental aspect of preparing a dataset for analysis, especially in complex datasets like healthcare claims. Inadequate handling of missing data can lead to biased estimates and misleading conclusions. Here’s a detailed scientific explanation of our approach to handling missing data:
 
 1. **Differentiating Types of Missing Data:**
    - **Missing Completely at Random (MCAR):** Where the probability of being missing is the same for all observations. If data are MCAR, the data missing does not introduce bias into the results.
