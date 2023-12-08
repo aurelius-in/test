@@ -11,7 +11,7 @@
 
 ### *Q. For the K-means Autoencoders/Neuroclusters notebook, could you explain why you set the distance as the risk score?*
 
-### **Why we set the distance as the risk score?**
+### **Why we set the distance as the risk score:
 
 ##### K-means Autoencoders/Neuroclusters Notebook
 
