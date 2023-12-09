@@ -15,8 +15,9 @@ stds = X_real.std()
 
 # Generate synthetic data
 num_samples = 2000
-synthetic_data = np.random.randn(num_samples, X_real.shape[1]) * stds + means
+synthetic_data = np.random.randn(num_samples, X_real.shape[1]) * stds.values + means.values
 synthetic_data = pd.DataFrame(synthetic_data, columns=X_real.columns)
+
 
 # Generate synthetic labels, balancing the classes as the real dataset
 synthetic_labels = np.random.choice(y_real.unique(), size=num_samples, p=y_real.value_counts(normalize=True))
