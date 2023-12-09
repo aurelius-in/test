@@ -1,9 +1,10 @@
 import pandas as pd
 import numpy as np
+from itertools import combinations
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-from itertools import combinations
 import matplotlib.pyplot as plt
 
 # Define file paths
@@ -23,16 +24,21 @@ if exclude_column in synthetic_data.columns:
 if exclude_column in real_data.columns:
     real_data.drop(columns=[exclude_column], inplace=True)
 
-# Preprocess the data (include steps for preprocessing)
-
-# Define the target variable
-target_variable = 'Risk'  # Update with the actual name of your target variable
+# Preprocess the data
+# Assuming 'Risk' is the target variable and it's the last column in the data
+label_encoders = {}
+for column in synthetic_data.columns[:-1]:  # Loop through all but the last column
+    if synthetic_data[column].dtype == np.object:
+        le = LabelEncoder()
+        synthetic_data[column] = le.fit_transform(synthetic_data[column])
+        real_data[column] = le.transform(real_data[column])
+        label_encoders[column] = le
 
 # Split datasets into features and target variable
-X_synthetic = synthetic_data.drop(target_variable, axis=1)
-y_synthetic = synthetic_data[target_variable]
-X_real = real_data.drop(target_variable, axis=1)
-y_real = real_data[target_variable]
+X_synthetic = synthetic_data.drop('Risk', axis=1)
+y_synthetic = synthetic_data['Risk']
+X_real = real_data.drop('Risk', axis=1)
+y_real = real_data['Risk']
 
 # Standardize the features
 scaler = StandardScaler()
@@ -40,10 +46,10 @@ X_synthetic_scaled = scaler.fit_transform(X_synthetic)
 X_real_scaled = scaler.transform(X_real)
 
 # Function to train and evaluate SVM model
-def evaluate_model(features):
+def evaluate_model(feature_indices):
     model = SVC(kernel='rbf', gamma='auto')
-    model.fit(X_synthetic_scaled[:, features], y_synthetic)
-    predictions = model.predict(X_real_scaled[:, features])
+    model.fit(X_synthetic_scaled[:, feature_indices], y_synthetic)
+    predictions = model.predict(X_real_scaled[:, feature_indices])
     return accuracy_score(y_real, predictions)
 
 # Get all feature indices excluding 'PRCP ID'
@@ -51,7 +57,7 @@ all_feature_indices = list(range(X_synthetic.shape[1]))
 
 # Start with 1 feature and add more
 best_accuracy = 0
-best_features = []
+best_features_indices = []
 accuracy_progress = []
 
 for combination in combinations(all_feature_indices, 1):
@@ -61,20 +67,20 @@ for combination in combinations(all_feature_indices, 1):
     
     if accuracy > best_accuracy:
         best_accuracy = accuracy
-        best_features = current_comb
-        print(f'New best feature set {best_features} with accuracy {best_accuracy}')
+        best_features_indices = current_comb
+        print(f'New best feature set {best_features_indices} with accuracy {best_accuracy}')
     
     # Iteratively add more features
     for feature_index in all_feature_indices:
-        if feature_index not in best_features:
-            new_comb = best_features + [feature_index]
+        if feature_index not in best_features_indices:
+            new_comb = best_features_indices + [feature_index]
             new_accuracy = evaluate_model(new_comb)
             print(f'Trying features {new_comb}, Accuracy: {new_accuracy}')
             
             if new_accuracy > best_accuracy:
                 best_accuracy = new_accuracy
-                best_features = new_comb
-                print(f'New best feature set {best_features} with accuracy {best_accuracy}')
+                best_features_indices = new_comb
+                print(f'New best feature set {best_features_indices} with accuracy {best_accuracy}')
     
     accuracy_progress.append(best_accuracy)
 
@@ -87,4 +93,4 @@ plt.ylabel('Accuracy')
 plt.grid(True)
 plt.show()
 
-print(f'Final best feature set: {best_features} with accuracy {best_accuracy}')
+print(f'Final best feature set: {best_features_indices} with accuracy {best_accuracy}')
