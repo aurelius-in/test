@@ -7,15 +7,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import matplotlib.pyplot as plt
 
-# Define file paths
-feature_dir = '/path/to/your/feature_directory/'  # Update with your directory
-synthetic_dir = '/path/to/your/synthetic_data_directory/'  # Update with your directory
-real_dir = '/path/to/your/real_data_directory/'  # Update with your directory
-
-# Load feature rankings and data
-feature_rank = pd.read_csv(feature_dir + 'feature_rank.csv')
-synthetic_data = pd.read_csv(synthetic_dir + 'synthetic_data.csv')
-real_data = pd.read_csv(real_dir + 'real_data.csv')
+# Load data
+feature_rank_df = pd.read_csv(feature_dir + 'feature_rank.csv')
+synthetic_data = pd.read_csv(output_dir + 'smote2000_96features.csv')
+real_data = pd.read_csv(binary_dir + 'real500.csv')
 
 # Exclude 'PRCP ID' column if it exists
 exclude_column = 'PRCP ID'
