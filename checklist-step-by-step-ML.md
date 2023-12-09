@@ -2,12 +2,14 @@
 
 ### Data Preparation
 - [ ] Prepare Data: Preprocess the dataset (handle missing values, encode categorical variables, normalize features).
+- [ ] Generate data: Generate synthetic data.
 - [ ] Split Data: Divide the dataset into training and testing sets.
 
 ### Data Weighting
-- [ ] Create two versions of the dataset: one with original weighting and another with adjusted weights (for class balance).
+- [ ] Create three versions of the dataset: one with original weighting ewith NaNs, one with 0s and NaN replaced with average values, and another with adjusted weights (for class balance).
 
-### Model Training and Evaluation
+### Model Training and Evaluation 
+#### (X3 datasets)
 - [ ] Train and evaluate CatBoost model.
 - [ ] Train and evaluate XGBoost model.
 - [ ] Train and evaluate LightGBM model.
@@ -22,12 +24,11 @@
 - [ ] Train and evaluate TabNet model.
 
 ### Comparison and Analysis
-- [ ] Compare each model's accuracy against CatBoost for weighted data.
-- [ ] Compare each model's accuracy against CatBoost for unweighted data.
+- [ ] Compare each model's accuracy for weighted and weighted data.
 - [ ] Analyze which models outperform CatBoost under each condition.
-
+      
 ### Visualization
-- [ ] Plot a graph displaying the accuracy of each model in comparison to CatBoost for both weighted and unweighted data.
+- [ ] Plot a graph displaying the accuracy of each model for both weighted and unweighted data.
 
 ### Documentation
 - [ ] Document findings and observations.
@@ -35,4 +36,3 @@
 ### Conclusions
 - [ ] Draw conclusions based on the model comparisons.
 - [ ] Make recommendations on the best models for the specific dataset and task.
-
