@@ -3,7 +3,7 @@ from imblearn.over_sampling import SMOTE
 import pandas as pd
 
 # Load your dataset
-data = pd.read_csv('path_to_your_data/real500.csv')
+data = pd.read_csv(binary_dir + 'real500.csv')
 
 # Assuming 'Risk' is your target variable
 X = data.drop('Risk', axis=1)
@@ -22,4 +22,4 @@ X_smote, y_smote = smote.fit_resample(X_train, y_train)
 balanced_data = pd.concat([pd.DataFrame(X_smote, columns=X_train.columns), pd.DataFrame(y_smote, columns=['Risk'])], axis=1)
 
 # Save the balanced data to a new CSV file
-balanced_data.to_csv('path_to_your_data/synthetic_balanced_data.csv', index=False)
+balanced_data.to_csv(output_dir + 'synthetic_data.csv', index=False)
