@@ -1,74 +1,85 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from itertools import combinations
+import random
 
 # Define the file paths (update these paths as per your directory structure)
 feature_dir = '/path/to/your/feature_directory/'  # Update with your directory
-binary_dir = '/path/to/your/binary_directory/'  # Update with your directory
+synthetic_dir = '/path/to/your/synthetic_data_directory/'  # Update with your directory
+real_dir = '/path/to/your/real_data_directory/'  # Update with your directory
 
 # Load feature rankings and data
 feature_rank = pd.read_csv(feature_dir + 'feature_rank.csv')
-data = pd.read_csv(binary_dir + 'binary_500_case_status.csv')
+synthetic_data = pd.read_csv(synthetic_dir + 'synthetic_data.csv')
+real_data = pd.read_csv(real_dir + 'real_data.csv')
 
-# Define target variable
-target_variable = 'Risk'
+# Preprocess the data (synthetic and real)
+# Include steps for preprocessing like filling missing values, encoding, etc.
 
-# Preprocess the data
-data.fillna(method='ffill', inplace=True)
-label_encoders = {}
-for column in data.columns:
-    if data[column].dtype == 'object':
-        le = LabelEncoder()
-        data[column] = le.fit_transform(data[column])
-        label_encoders[column] = le
+# Define the target variable
+target_variable = 'Risk'  # Update this with the actual name of your target variable
 
-# Splitting the dataset into features and target variable
-X = data.drop(target_variable, axis=1)
-y = data[target_variable]
+# Splitting the datasets into features and target variable
+X_synthetic = synthetic_data.drop(target_variable, axis=1)
+y_synthetic = synthetic_data[target_variable]
+X_real = real_data.drop(target_variable, axis=1)
+y_real = real_data[target_variable]
 
 # Standardizing the features
 scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+X_synthetic_scaled = scaler.fit_transform(X_synthetic)
+X_real_scaled = scaler.transform(X_real)
 
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
-
-# Function to train and evaluate SVM model
+# Function to train and evaluate the SVM model
 def evaluate_model(features):
     model = SVC(kernel='rbf', gamma='auto')
-    model.fit(X_train[:, features], y_train)
-    predictions = model.predict(X_test[:, features])
-    return accuracy_score(y_test, predictions)
+    model.fit(X_synthetic_scaled[:, features], y_synthetic)
+    predictions = model.predict(X_real_scaled[:, features])
+    return accuracy_score(y_real, predictions)
 
-# Get all feature names
-all_features = feature_rank['Feature'].tolist()
+# Get all feature indices
+all_feature_indices = list(range(X_synthetic.shape[1]))
 
-# Get indices of top 14 features
-top_14_indices = [all_features.index(feature) for feature in feature_rank.sort_values(by='LLM SVM Rank').head(14)['Feature'].tolist()]
-
-# Start with best combination of 10 out of top 14 features
+# Start with 1 feature and add more
 best_accuracy = 0
-best_features_indices = []
-for combination in combinations(top_14_indices, 10):
-    accuracy = evaluate_model(list(combination))
+best_features = []
+accuracy_progress = []
+
+for combination in combinations(all_feature_indices, 1):
+    current_comb = list(combination)
+    accuracy = evaluate_model(current_comb)
+    print(f'Trying features {current_comb}, Accuracy: {accuracy}')
+    
     if accuracy > best_accuracy:
         best_accuracy = accuracy
-        best_features_indices = list(combination)
+        best_features = current_comb
+        print(f'New best feature set {best_features} with accuracy {best_accuracy}')
+    
+    # Iteratively add more features
+    for feature_index in all_feature_indices:
+        if feature_index not in best_features:
+            new_comb = best_features + [feature_index]
+            new_accuracy = evaluate_model(new_comb)
+            print(f'Trying features {new_comb}, Accuracy: {new_accuracy}')
+            
+            if new_accuracy > best_accuracy:
+                best_accuracy = new_accuracy
+                best_features = new_comb
+                print(f'New best feature set {best_features} with accuracy {best_accuracy}')
+    
+    accuracy_progress.append(best_accuracy)
 
-print(f'Best initial combination: {best_features_indices} with accuracy: {best_accuracy}')
+# Plotting the accuracy progress
+plt.figure(figsize=(10, 6))
+plt.plot(accuracy_progress, marker='o')
+plt.title('Model Accuracy Progression')
+plt.xlabel('Number of Features')
+plt.ylabel('Accuracy')
+plt.grid(True)
+plt.show()
 
-# Include the remaining features
-for index in range(len(all_features)):
-    if index not in best_features_indices:
-        current_features_indices = best_features_indices + [index]
-        accuracy = evaluate_model(current_features_indices)
-        if accuracy > best_accuracy:
-            best_accuracy = accuracy
-            best_features_indices = current_features_indices
-            print(f'Adding feature at index {index} improved accuracy to {best_accuracy}')
-
-print(f'Final set of features: {best_features_indices} with accuracy: {best_accuracy}')
+print(f'Final best feature set: {best_features} with accuracy {best_accuracy}')
