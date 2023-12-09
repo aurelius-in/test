@@ -12,26 +12,18 @@ feature_rank_df = pd.read_csv(feature_dir + 'feature_rank.csv')
 synthetic_data = pd.read_csv(output_dir + 'smote2000_96features.csv')
 real_data = pd.read_csv(binary_dir + 'real500.csv')
 
-# Exclude 'PRCP ID' column if it exists
+# Drop 'PRCP ID' column if it exists
 exclude_column = 'PRCP ID'
-if exclude_column in synthetic_data.columns:
-    synthetic_data.drop(columns=[exclude_column], inplace=True)
-if exclude_column in real_data.columns:
-    real_data.drop(columns=[exclude_column], inplace=True)
+synthetic_data.drop(columns=[exclude_column], inplace=True, errors='ignore')
+real_data.drop(columns=[exclude_column], inplace=True, errors='ignore')
 
-# Preprocess the data
-label_encoders = {}
-for column in synthetic_data.columns[:-1]:  # Loop through all but the last column
-    if synthetic_data[column].dtype.name == 'object':  # Corrected line
-        le = LabelEncoder()
-        synthetic_data[column] = le.fit_transform(synthetic_data[column])
-        real_data[column] = le.transform(real_data[column])
-        label_encoders[column] = le
-        
-# Split datasets into features and target variable
-X_synthetic = synthetic_data.drop('Risk', axis=1)
+# Ensure both datasets have the same columns in the same order
+common_columns = synthetic_data.columns.intersection(real_data.columns)
+X_synthetic = synthetic_data[common_columns]
+X_real = real_data[common_columns]
+
+# Ensure 'Risk' column is in both datasets
 y_synthetic = synthetic_data['Risk']
-X_real = real_data.drop('Risk', axis=1)
 y_real = real_data['Risk']
 
 # Standardize the features
