@@ -1,0 +1,26 @@
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+# Load your real dataset
+real_data = pd.read_csv(binary_dir + 'real500.csv')
+
+# Assuming the last column is the target variable
+X_real = real_data.iloc[:, :-1]
+y_real = real_data.iloc[:, -1]
+
+# Get basic statistics from the real dataset
+means = X_real.mean()
+stds = X_real.std()
+
+# Generate synthetic data
+num_samples = 2000
+synthetic_data = np.random.randn(num_samples, X_real.shape[1]) * stds + means
+synthetic_data = pd.DataFrame(synthetic_data, columns=X_real.columns)
+
+# Generate synthetic labels, balancing the classes as the real dataset
+synthetic_labels = np.random.choice(y_real.unique(), size=num_samples, p=y_real.value_counts(normalize=True))
+synthetic_data['Risk'] = synthetic_labels
+
+# Save synthetic data
+synthetic_data.to_csv(output_dir + 'synthetic2000.csv', index=False)
