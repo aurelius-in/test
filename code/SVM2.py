@@ -20,15 +20,14 @@ if exclude_column in real_data.columns:
     real_data.drop(columns=[exclude_column], inplace=True)
 
 # Preprocess the data
-# Assuming 'Risk' is the target variable and it's the last column in the data
 label_encoders = {}
 for column in synthetic_data.columns[:-1]:  # Loop through all but the last column
-    if synthetic_data[column].dtype == np.object:
+    if synthetic_data[column].dtype.name == 'object':  # Corrected line
         le = LabelEncoder()
         synthetic_data[column] = le.fit_transform(synthetic_data[column])
         real_data[column] = le.transform(real_data[column])
         label_encoders[column] = le
-
+        
 # Split datasets into features and target variable
 X_synthetic = synthetic_data.drop('Risk', axis=1)
 y_synthetic = synthetic_data['Risk']
