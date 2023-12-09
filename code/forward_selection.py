@@ -4,21 +4,19 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
 # Load data
-feature_rank_df = pd.read_csv('feature_rank.csv')
-synthetic_data = pd.read_csv('smote2000.csv')
-real_data = pd.read_csv('real500.csv')
+feature_rank_df = pd.read_csv(feature_dir + 'feature_rank.csv')
+synthetic_data = pd.read_csv(output_dir + 'smote2000_96features.csv')
+real_data = pd.read_csv(binary_dir + 'real500.csv')
 
-# Define target variable name
-target_variable = 'target'  # Replace with the name of your target variable
-
-# Splitting real data into features and target
-X_real = real_data.drop(target_variable, axis=1)
-y_real = real_data[target_variable]
+# Define target variable
+target_variable = 'Risk'
 
 # Starting with top 14 features
-top_features = feature_rank_df['LLM CSV Rank'].iloc[:14].tolist()
-X_train = synthetic_data[top_features]
-y_train = synthetic_data[target_variable]
+top_features = []
+for value in feature_rank_df['LLM SVM Rank'].iloc[:14].tolist():
+    feature = feature_rank_df.loc[feature_rank_df['LLM SVM Rank'] == value, 'Feature'].item()
+    top_features.append(feature)
+
 
 # Train initial model
 model = SVC()
@@ -28,7 +26,7 @@ initial_accuracy = accuracy_score(y_real, y_pred)
 print(f'Initial model accuracy with top 14 features: {initial_accuracy}')
 
 # Forward selection process
-for feature in feature_rank_df['LLM CSV Rank'].iloc[14:96]:
+for feature in feature_rank_df['LLM SVM Rank'].iloc[14:96]:
     new_features = top_features + [feature]
     X_train_new = synthetic_data[new_features]
     
@@ -46,3 +44,16 @@ for feature in feature_rank_df['LLM CSV Rank'].iloc[14:96]:
         print(f'Feature {feature} did not improve accuracy, skipping...')
 
 print(f'Final set of features: {top_features}')
+# Train initial model
+X_train = synthetic_data[top_features]
+y_train = synthetic_data[target_variable]
+X_test = real_data[top_features]
+y_test = real_data[target_variable]
+
+model = SVC()
+model.fit(X_train, y_train)
+
+# Evaluate model
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print('Accuracy: ', accuracy)
