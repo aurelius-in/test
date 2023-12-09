@@ -1,25 +1,9 @@
-import pandas as pd
-from sklearn.preprocessing import StandardScaler
+# After loading and preprocessing your data
+num_features = X_synthetic.shape[1]  # Determine the number of features in the synthetic data
 
-# Load data
-synthetic_data = pd.read_csv('path_to_synthetic_data.csv')
-real_data = pd.read_csv('path_to_real_data.csv')
+# Initialize VAE with the correct input dimension
+vae, _, _ = build_vae(input_dim=num_features)
 
-# Drop 'PRCP ID' column if it exists in both datasets
-exclude_column = 'PRCP ID'
-synthetic_data.drop(columns=[exclude_column], inplace=True, errors='ignore')
-real_data.drop(columns=[exclude_column], inplace=True, errors='ignore')
-
-# Ensure both datasets have the same columns in the same order
-common_columns = synthetic_data.columns.intersection(real_data.columns)
-X_synthetic = synthetic_data[common_columns]
-X_real = real_data[common_columns]
-
-# Add target column
-y_synthetic = synthetic_data['Risk']
-y_real = real_data['Risk']
-
-# Standardize the features
-scaler = StandardScaler()
-X_synthetic_scaled = scaler.fit_transform(X_synthetic)
-X_real_scaled = scaler.transform(X_real)
+# Compile and fit the VAE
+vae.compile(optimizer='adam')
+vae.fit(X_synthetic, epochs=1000, batch_size=64)
