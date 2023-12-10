@@ -13,9 +13,13 @@ for date_col in ['Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most 
     raw_data[date_col + ' Year'] = pd.to_datetime(raw_data[date_col], errors='coerce', format='%m/%d/%Y').dt.year
 
 # Load additional data 
+status_data = pd.read_csv(feature_dir + 'features_status.csv')
 comments_data = pd.read_csv(feature_dir + 'features_comments.csv')
 pass_data = pd.read_csv(feature_dir + 'features_pass.csv')
 recent_case_data = pd.read_csv(feature_dir + 'features_recent_case.csv')
+
+# Merge the raw data with case status scores
+data_with_status = pd.merge(raw_data, status_data[['Most Recent Case Status', 'Most Recent Case Status Score']], on='Most Recent Case Status')
 
 # Merge the raw data with comments scores
 data_with_comments = pd.merge(raw_data, comments_data[['Comments', 'Comment Score']], on='Comments')
@@ -26,15 +30,16 @@ data_with_pass = pd.merge(data_with_comments, pass_data[['Reason for pass', 'Pas
 # Merge with recent case scores
 final_data = data_with_pass.copy()
 for date_col in ['Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most Recent Data Mining Activity Update Dt']:
-    score_col_name = date_col + ' Score'  # Adjust the column name format if necessary
+    score_col_name = date_col + ' Score' 
     temp_data = pd.merge(final_data, recent_case_data[['Year', score_col_name]], left_on=date_col + ' Year', right_on='Year', how='left')
     final_data[score_col_name] = temp_data[score_col_name]
 
 # Drop extra Year columns
-final_data.drop(columns=['Most Recent Case Open Dt Year', 'Most Recent Case Close Dt Year', 'Most Recent Data Mining Activity Update Dt Year'], inplace=True)
+final_data.drop(columns=['Reason for pass', 'Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most Recent Data Mining Activity Update Dt', 'Comments', 'Most Recent Case Status', 'Most Recent Case Open Dt Year', 'Most Recent Case Close Dt Year', 'Most Recent Data Mining Activity Update Dt Year'], inplace=True)
 
 # Rename columns to match your final dataset
 final_data.rename(columns={
+    'Most Recent Case Status Score': 'StatusScore',
     'Comment Score': 'CommentsScore',
     'Pass Score': 'PassScore',
     'Most Recent Case Open Dt Score': 'OpenDtScore',
