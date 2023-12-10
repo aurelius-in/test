@@ -53,5 +53,10 @@ def calculate_risk_score(row):
 # Apply the function to each row in the dataset
 data['Risk Score'] = data.apply(calculate_risk_score, axis=1)
 
-# Output the result
-print(data[['PRCP ID', 'Risk Score']])  
+# Specify the file name for the new CSV
+output_file = 'provider_actions_with_risk_scores.csv'
+
+# Save the DataFrame to a new CSV, keeping the original columns plus the new 'Risk Score'
+data.to_csv(output_file, index=False)
+
+print(f"Data saved to {output_file}")
