@@ -1,0 +1,39 @@
+Feature, Frequency
+$ Crisis Add On Pd, 1
+% $ Pd Crisis Add On, 1
+Crisis Add On Pt Cnt, 1
+Crisis Add On Vst Cnt, 1
+$ Diff State Treat Pd, 1
+% $ Pd Diff State Treat, 1
+Diff State Treat Pt Cnt, 1
+Diff State Treat Vst Cnt, 1
+$ Non-MD CPT Pd, 2
+% $ Pd Non-MD CPT, 2
+Non-MD CPT Pt Cnt, 2
+Non-MD CPT Vst Cnt, 2
+State (FL), 1
+Provider Type (MD), 1
+Psychother Add On E/M Pt Cnt, 1
+Psychother Add On E/M Vst Cnt, 1
+$ Psychother Add On E/M Pd, 1
+% $ Pd Psychother Add On E/M, 1
+$ >8 Hour/Day Days Pd, 1
+% Days >8 Hour/Day, 1
+Provider Type (PHD), 1
+$ High Cost E/M Pd, 1
+% $ Pd High Cost E/M, 1
+High Cost E/M Pt Cnt, 1
+High Cost E/M Vst Cnt, 1
+$ Tot Pd, 1
+% $ Pd Tot, 1
+Tot Days Pt Seen, 1
+Tot Vst Cnt, 1
+$ X-billing Pd, 1
+% $ Pd X-billing, 1
+X-billing Pt Cnt, 1
+X-billing Vst Cnt, 1
+State (RI), 1
+$ HCPC Pd, 1
+% $ Pd HCPC, 1
+HCPC Pt Cnt, 1
+HCPC Vst Cnt, 1
