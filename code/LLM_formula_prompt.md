@@ -3,7 +3,8 @@ Most of these providers have had no manual determination of risk made by expert 
 For those providers who have had some actions taken there maybe a value in up to one or more additional 'actions' columns inclucing:
 Comments, Most Recent Case Status, Reasons for pass, Most Recent Case Open Dt, Most Recent Case Close Dt, Most Recent Data Mining Activity Update Dt.
 
-A weight has been determined for each value using an LLM to determine its importance for determining risk. Most of the providers on the list of labeled providers are missing one or more of these values.  
+A weight has been determined for each value using an LLM to determine its importance for determining risk. Most of the providers on the list of labeled providers are missing one or more of these values.
+Only a few providers have values in all six columns, so we need to maximize the amount of labeled data we have to train a model by extracting meaning from the little information we have to understand provider risk.
 Any provider with one or more value in an actions column is considered labelled data, but a determination must be made how to assing a risk score to each provider based on the values in each of these columns.
 Only a small minority of providers have a value in one or more of the six actions columns (~2500 out of 111k are 'labeled'), therfore a formula is needed to determine a risk score based on the six values.  
 The values have been preprocessed by an LLM to determine a value for each, so the Comments have been converted to a Comments Score, the Most Recent Case Status has been given a Score, the Reason for Pass has been given a score, etc.
