@@ -3,17 +3,17 @@ import numpy as np
 from datetime import datetime
 
 # Load your CSV file
-csv_file = 'provider_actions.csv'  # Replace with your CSV file path
+csv_file = labels_dir + 'provider_actions.csv' 
 data = pd.read_csv(csv_file)
 
 # Define the weights for each feature, including date columns
 weights = {
-    'Most Recent Case Status': 0.50,
-    'Reason for Pass Score': 0.25,
-    'Comments Score': 0.20,
-    'Most Recent Case Open Dt': 0.10,
-    'Most Recent Case Close Dt': 0.10,
-    'Most Recent Data Mining Activity Update Dt': 0.05
+    'StatusScore': 0.50,
+    'PassScore': 0.25,
+    'CommentsScore': 0.20,
+    'OpenDtScore': 0.10,
+    'CloseDtScore': 0.10,
+    'MiningDtScore': 0.05
 }
 
 # Normalize function (example: Min-Max Scaling)
@@ -29,7 +29,7 @@ def convert_date_to_numerical(date_str):
     return (datetime.now() - date_obj).days
 
 # Convert and normalize date columns
-for date_col in ['Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most Recent Data Mining Activity Update Dt']:
+for date_col in ['OpenDtScore', 'CloseDtScore', 'MiningDtScore']:
     data[date_col] = data[date_col].apply(convert_date_to_numerical)
     data[date_col] = data[date_col].fillna(data[date_col].mean())  # Replace NaN with mean
     min_val = data[date_col].min()
@@ -57,7 +57,7 @@ def calculate_risk_score(row):
 data['Risk Score'] = data.apply(calculate_risk_score, axis=1)
 
 # Specify the file name for the new CSV
-output_file = 'provider_actions_with_risk_scores.csv'
+output_file = labels_dir + 'provider_actions_with_risk_scores.csv'
 
 # Save the DataFrame to a new CSV, keeping the original columns plus the new 'Risk Score'
 data.to_csv(output_file, index=False)
