@@ -54,17 +54,19 @@ print("Data processing complete. The merged data is saved in 'provider_actions.c
 
 # Count non-null values in each column
 total_providers = len(final_data)
-comments_count = final_data['CommentsScore'].count()
 status_count = final_data['StatusScore'].count()
+comments_count = final_data['CommentsScore'].count()
+pass_count = final_data['PassScore'].count()
 mining_count = final_data['MiningDtScore'].count()
 open_dt_count = final_data['OpenDtScore'].count()
 close_dt_count = final_data['CloseDtScore'].count()
 
+
 # Print the counts in the specified format
 print(f"Out of {total_providers} providers with actions, "
-      f"{comments_count} have a CommentsScore, "
-      f"{status_count} have a StatusScore, "
-      f"{mining_count} have a MiningDtScore, "
-      f"{open_dt_count} have a OpenDtScore and "
-      f"{close_dt_count} have a CloseDtScore.")
-
+      f"{pass_count} have a Reason for Pass, "
+      f"{comments_count} have Comments, "
+      f"{status_count} have a Case Status, "
+      f"{mining_count} have a Mining Date, "
+      f"{open_dt_count} have a Open Case Date and "
+      f"{close_dt_count} have a Close Case Date.")
