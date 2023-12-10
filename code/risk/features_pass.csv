@@ -1,0 +1,6 @@
+Reason for pass,Pass Score,Pass Score Reason
+Out of scope,0.05,Minimal risk as the case falls outside the purview of current risk assessment criteria
+Case closed within past 4 months and patterns addressed,0.1,Low risk as issues were recently resolved and patterns addressed
+Patterns do not warrant outreach at this time,0.2,Lower risk as current patterns do not necessitate immediate intervention
+Referred to alternate PM team,0.4,Medium risk due to transfer to another team for further evaluation or specialized handling
+Case currently open,0.6,Moderate risk as the case is still under investigation or review
