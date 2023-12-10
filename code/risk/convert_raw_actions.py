@@ -19,13 +19,13 @@ pass_data = pd.read_csv(feature_dir + 'features_pass.csv')
 recent_case_data = pd.read_csv(feature_dir + 'features_recent_case.csv')
 
 # Merge the raw data with comments scores
-data_with_comments = pd.merge(raw_data, comments_data[['Comments', 'Comment Score']], on='Comments')
+data_with_comments = pd.merge(raw_data, comments_data[['Comments', 'Comment Score']], on='Comments', how='left')
 
 # Merge with pass scores
-data_with_pass = pd.merge(data_with_comments, pass_data[['Reason for pass', 'Pass Score']], on='Reason for pass')
+data_with_pass = pd.merge(data_with_comments, pass_data[['Reason for pass', 'Pass Score']], on='Reason for pass', how='left')
 
 # Merge the raw data with case status scores
-data_with_status = pd.merge(data_with_pass, status_data[['Most Recent Case Status', 'Most Recent Case Status Score']], on='Most Recent Case Status')
+data_with_status = pd.merge(data_with_pass, status_data[['Most Recent Case Status', 'Most Recent Case Status Score']], on='Most Recent Case Status', how='left')
 
 # Merge with recent case scores
 final_data = data_with_status.copy()
