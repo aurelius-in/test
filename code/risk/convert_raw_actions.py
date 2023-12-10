@@ -18,17 +18,17 @@ comments_data = pd.read_csv(feature_dir + 'features_comments.csv')
 pass_data = pd.read_csv(feature_dir + 'features_pass.csv')
 recent_case_data = pd.read_csv(feature_dir + 'features_recent_case.csv')
 
-# Merge the raw data with case status scores
-data_with_status = pd.merge(raw_data, status_data[['Most Recent Case Status', 'Most Recent Case Status Score']], on='Most Recent Case Status')
-
 # Merge the raw data with comments scores
 data_with_comments = pd.merge(raw_data, comments_data[['Comments', 'Comment Score']], on='Comments')
 
 # Merge with pass scores
 data_with_pass = pd.merge(data_with_comments, pass_data[['Reason for pass', 'Pass Score']], on='Reason for pass')
 
+# Merge the raw data with case status scores
+data_with_status = pd.merge(data_with_pass, status_data[['Most Recent Case Status', 'Most Recent Case Status Score']], on='Most Recent Case Status')
+
 # Merge with recent case scores
-final_data = data_with_pass.copy()
+final_data = data_with_status.copy()
 for date_col in ['Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most Recent Data Mining Activity Update Dt']:
     score_col_name = date_col + ' Score' 
     temp_data = pd.merge(final_data, recent_case_data[['Year', score_col_name]], left_on=date_col + ' Year', right_on='Year', how='left')
