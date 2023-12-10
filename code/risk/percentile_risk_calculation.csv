@@ -1,40 +1,19 @@
 import pandas as pd
 import numpy as np
-from datetime import datetime
 
 # Load your CSV file
 csv_file = labels_dir + 'provider_actions.csv' 
 data = pd.read_csv(csv_file)
 
-# Define the weights for each feature, including date columns
+# Define the new weights for each feature
 weights = {
-    'StatusScore': 0.50,
-    'PassScore': 0.25,
-    'CommentsScore': 0.20,
-    'OpenDtScore': 0.10,
-    'CloseDtScore': 0.10,
-    'MiningDtScore': 0.05
+    'StatusScore': 0.31,
+    'PassScore': 0.33,
+    'CommentsScore': 0.33,
+    'OpenDtScore': 0.01,
+    'CloseDtScore': 0.01,
+    'MiningDtScore': 0.01
 }
-
-# Normalize function (example: Min-Max Scaling)
-def normalize(value, min_val, max_val):
-    return (value - min_val) / (max_val - min_val) if max_val > min_val else 0
-
-# Convert date columns to numerical values (days since the date)
-def convert_date_to_numerical(date_str):
-    if pd.isna(date_str):
-        return None
-    date_format = "%Y-%m-%d"  # Adjust this based on your date format
-    date_obj = datetime.strptime(date_str, date_format)
-    return (datetime.now() - date_obj).days
-
-# Convert and normalize date columns
-for date_col in ['OpenDtScore', 'CloseDtScore', 'MiningDtScore']:
-    data[date_col] = data[date_col].apply(convert_date_to_numerical)
-    data[date_col] = data[date_col].fillna(data[date_col].mean())  # Replace NaN with mean
-    min_val = data[date_col].min()
-    max_val = data[date_col].max()
-    data[date_col] = data[date_col].apply(lambda x: normalize(x, min_val, max_val))
 
 # Calculate percentile values for missing data in other columns
 percentile_for_missing = 25  # Example: 25th percentile
