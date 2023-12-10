@@ -1,40 +1,51 @@
-Epoch 1/1000
----------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
-Cell In[7], line 4
-      1 #
-      3 vae.compile(optimizer='adam')
-----> 4 vae.fit(X_synthetic, epochs=1000, batch_size=64) 
-      6 #
+Cell In[5], line 18
+     16 # Extract years from date columns in raw data
+     17 for date_col in ['Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most Recent Data Mining Activity Update Dt']:
+---> 18     raw_data[date_col + ' Year'] = pd.to_datetime(raw_data[date_col]).dt.year
+     20 # Merge the raw data with comments scores
+     21 data_with_comments = pd.merge(raw_data, comments_data[['Comments', 'Comment Score']], on='Comments')
 
-File /anaconda/envs/azureml_py38_PT_TF/lib/python3.8/site-packages/keras/utils/traceback_utils.py:70, in filter_traceback.<locals>.error_handler(*args, **kwargs)
-     67     filtered_tb = _process_traceback_frames(e.__traceback__)
-     68     # To get the full stack trace, call:
-     69     # `tf.debugging.disable_traceback_filtering()`
----> 70     raise e.with_traceback(filtered_tb) from None
-     71 finally:
-     72     del filtered_tb
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/tools/datetimes.py:1050, in to_datetime(arg, errors, dayfirst, yearfirst, utc, format, exact, unit, infer_datetime_format, origin, cache)
+   1048         result = arg.map(cache_array)
+   1049     else:
+-> 1050         values = convert_listlike(arg._values, format)
+   1051         result = arg._constructor(values, index=arg.index, name=arg.name)
+   1052 elif isinstance(arg, (ABCDataFrame, abc.MutableMapping)):
 
-File /tmp/__autograph_generated_file5rkyfum8.py:15, in outer_factory.<locals>.inner_factory.<locals>.tf__train_function(iterator)
-     13 try:
-     14     do_return = True
----> 15     retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
-     16 except:
-     17     do_return = False
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/tools/datetimes.py:453, in _convert_listlike_datetimes(arg, format, name, utc, unit, errors, dayfirst, yearfirst, exact)
+    451 # `format` could be inferred, or user didn't ask for mixed-format parsing.
+    452 if format is not None and format != "mixed":
+--> 453     return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+    455 result, tz_parsed = objects_to_datetime64ns(
+    456     arg,
+    457     dayfirst=dayfirst,
+   (...)
+    461     allow_object=True,
+    462 )
+    464 if tz_parsed is not None:
+    465     # We can take a shortcut since the datetime64 numpy array
+    466     # is in UTC
 
-ValueError: in user code:
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/tools/datetimes.py:484, in _array_strptime_with_fallback(arg, name, utc, fmt, exact, errors)
+    473 def _array_strptime_with_fallback(
+    474     arg,
+    475     name,
+   (...)
+    479     errors: str,
+    480 ) -> Index:
+    481     """
+    482     Call array_strptime, with fallback behavior depending on 'errors'.
+    483     """
+--> 484     result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+    485     if any(tz is not None for tz in timezones):
+    486         return _return_parsed_timezone_results(result, timezones, utc, name)
 
-    File "/anaconda/envs/azureml_py38_PT_TF/lib/python3.8/site-packages/keras/engine/training.py", line 1160, in train_function  *
-        return step_function(self, iterator)
-    File "/anaconda/envs/azureml_py38_PT_TF/lib/python3.8/site-packages/keras/engine/training.py", line 1146, in step_function  **
-        outputs = model.distribute_strategy.run(run_step, args=(data,))
-    File "/anaconda/envs/azureml_py38_PT_TF/lib/python3.8/site-packages/keras/engine/training.py", line 1135, in run_step  **
-        outputs = model.train_step(data)
-    File "/anaconda/envs/azureml_py38_PT_TF/lib/python3.8/site-packages/keras/engine/training.py", line 993, in train_step
-        y_pred = self(x, training=True)
-    File "/anaconda/envs/azureml_py38_PT_TF/lib/python3.8/site-packages/keras/utils/traceback_utils.py", line 70, in error_handler
-        raise e.with_traceback(filtered_tb) from None
-    File "/anaconda/envs/azureml_py38_PT_TF/lib/python3.8/site-packages/keras/engine/input_spec.py", line 295, in assert_input_compatibility
-        raise ValueError(
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/_libs/tslibs/strptime.pyx:530, in pandas._libs.tslibs.strptime.array_strptime()
 
-    ValueError: Input 0 of layer "vae_mlp" is incompatible with the layer: expected shape=(None, 96), found shape=(None, 97)
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/_libs/tslibs/strptime.pyx:351, in pandas._libs.tslibs.strptime.array_strptime()
+
+ValueError: time data "39778.72727" doesn't match format "%m/%d/%Y", at position 1621. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
