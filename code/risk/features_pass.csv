@@ -1,6 +1,6 @@
 Reason for pass,Pass Score,Pass Score Reason
-Out of scope,0.05,Minimal risk as the case falls outside the purview of current risk assessment criteria
-Case closed within past 4 months and patterns addressed,0.1,Low risk as issues were recently resolved and patterns addressed
-Patterns do not warrant outreach at this time,0.2,Lower risk as current patterns do not necessitate immediate intervention
-Referred to alternate PM team,0.4,Medium risk due to transfer to another team for further evaluation or specialized handling
-Case currently open,0.6,Moderate risk as the case is still under investigation or review
+Out of scope,0.4,Higher inherent risk as "out of scope" might indicate complexities or issues not covered by standard assessment criteria, requiring special attention
+Case closed within past 4 months and patterns addressed,0.6,High inherent risk due to the existence of patterns that needed addressing, indicating significant risk factors that were present
+Patterns do not warrant outreach at this time,0.1,Lowest inherent risk as current patterns are deemed non-alarming and do not trigger immediate concerns
+Referred to alternate PM team,0.5,Increased inherent risk as referral to another team suggests complexities or risk factors that require specialized assessment
+Case currently open,0.55,High inherent risk as an open case indicates ongoing concerns or unresolved issues that potentially signify risk
