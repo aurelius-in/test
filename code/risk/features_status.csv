@@ -1,0 +1,6 @@
+Most Recent Case Status,Most Recent Case Status Score,Status Score Reason
+Active Investigation,0.8,High concern - ongoing investigation indicating unresolved issues or potential risks
+Open,0.6,Moderate concern - case is currently open indicating ongoing monitoring or unresolved aspects
+Closed,0.1,Low concern - case is closed indicating resolution or lack of issues
+Closed with Findings,0.5,Moderate to high concern - case closed but with identified issues or findings
+Closed without Findings,0.15,Minimal concern - case closed with no significant findings or unresolved issues
