@@ -51,3 +51,20 @@ final_data.rename(columns={
 final_data.to_csv(labels_dir + 'provider_actions.csv', index=False)
 
 print("Data processing complete. The merged data is saved in 'provider_actions.csv'.")
+
+# Count non-null values in each column
+total_providers = len(final_data)
+comments_count = final_data['CommentsScore'].count()
+status_count = final_data['StatusScore'].count()
+mining_count = final_data['MiningDtScore'].count()
+open_dt_count = final_data['OpenDtScore'].count()
+close_dt_count = final_data['CloseDtScore'].count()
+
+# Print the counts in the specified format
+print(f"Out of {total_providers} providers with actions, "
+      f"{comments_count} have a CommentsScore, "
+      f"{status_count} have a StatusScore, "
+      f"{mining_count} have a MiningDtScore, "
+      f"{open_dt_count} have a OpenDtScore and "
+      f"{close_dt_count} have a CloseDtScore.")
+
