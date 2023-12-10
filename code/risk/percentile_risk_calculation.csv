@@ -28,7 +28,7 @@ for feature in weights.keys():
 def calculate_risk_score(row):
     risk_score = 0
     for feature, weight in weights.items():
-        feature_value = row.get(feature, default_values.get(feature, 0))
+        feature_value = row[feature] if pd.notna(row[feature]) else default_values[feature]
         risk_score += feature_value * weight
     return risk_score * 100  # Normalize to a 0-100 scale
 
