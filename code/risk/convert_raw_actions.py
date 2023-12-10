@@ -30,6 +30,10 @@ for date_col in ['Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most 
 comments_data = pd.read_csv(feature_dir +'features_comments.csv')
 pass_data = pd.read_csv(feature_dir + 'features_pass.csv')
 recent_case_data = pd.read_csv(feature_dir + 'features_recent_case.csv')
+status_data = pd.read_csv(feature_dir + 'features_status.csv')
+
+# Merge the raw data with Case Status scores
+data_with_status = pd.merge(raw_data, status_data[['Most Recent Case Status', 'Status Score']], on='Most Recent Case Status')
 
 # Merge the raw data with comments scores
 data_with_comments = pd.merge(raw_data, comments_data[['Comments', 'Comment Score']], on='Comments')
@@ -41,16 +45,19 @@ data_with_pass = pd.merge(data_with_comments, pass_data[['Reason for pass', 'Pas
 final_data = data_with_pass.copy()
 for date_col in ['Most Recent Case Open Dt', 'Most Recent Case Close Dt', 'Most Recent Data Mining Activity Update Dt']:
     temp_data = pd.merge(final_data, recent_case_data[['Year', date_col + 'Score']], left_on=date_col + ' Year', right_on='Year')
-    final_data[date_col + ' Score'] = temp_data[date_col + 'Score']
+    final_data[date_col + ' Score'] = temp_data[date_col + ' Score']
 
 # Drop extra Year columns
 final_data.drop(columns=['Most Recent Case Open Dt Year', 'Most Recent Case Close Dt Year', 'Most Recent Data Mining Activity Update Dt Year'], inplace=True)
 
 # Rename columns to match your final dataset
 final_data.rename(columns={
-    'Most Recent Case Open Dt Score': 'Most Recent Case Open Dt',
-    'Most Recent Case Close Dt Score': 'Most Recent Case Close Dt',
-    'Most Recent Data Mining Activity Update Dt Score': 'Most Recent Data Mining Activity Update Dt'
+    'Most Recent Case Status Score': 'StatusScore',
+    'Pass Score': 'PassScore',
+    'Comments Score': 'CommentsScore',
+    'Most Recent Case Open Dt Score': 'OpenDtScore',
+    'Most Recent Case Close Dt Score': 'CloseDtScore',
+    'Most Recent Data Mining Activity Update Dt Score': 'MiningDtScore'
 }, inplace=True)
 
 # Save the merged data
