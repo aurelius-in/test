@@ -7,9 +7,9 @@ data = pd.read_csv(csv_file)
 
 # Define the new weights for each feature
 weights = {
-    'StatusScore': 0.31,
-    'PassScore': 0.33,
-    'CommentsScore': 0.33,
+    'StatusScore': 0.33,
+    'PassScore': 0.32,
+    'CommentsScore': 0.32,
     'OpenDtScore': 0.01,
     'CloseDtScore': 0.01,
     'MiningDtScore': 0.01
