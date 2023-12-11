@@ -1,6 +1,6 @@
 Most Recent Case Status,Most Recent Case Status Score,Status Score Reason
 Active Investigation,0.85,High concern - ongoing investigation indicates a high potential for risk - though specific findings are not yet determined
-Open,0.75,Above average concern - an open case implies unresolved issues - suggesting a heightened level of risk
-Closed,0.30,Lower concern - case closure often indicates some resolution - but it doesn’t fully negate the potential for inherent risk
+Open,0.80,Above average concern - an open case implies unresolved issues - suggesting a heightened level of risk
+Closed,0.75,Lower concern - case closure often indicates some resolution - but it doesn’t fully negate the potential for inherent risk
 Closed with Findings,0.90,Highest concern - closure with findings suggests that risk factors were identified - indicating a high level of inherent risk
 Closed without Findings,0.45,Slightly lower concern than cases closed with findings - but still acknowledges the inherent risk that led to the case being opened
