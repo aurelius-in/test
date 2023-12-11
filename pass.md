@@ -1,1 +1,1 @@
-In 2023, our team pioneered the Provider Outlier Dashboard, a state-of-the-art ML tool that automates risk assessment and provider identification, empowering the Provider Practice Management team to substantially reduce time dedicated to data analysis and provider investigations, complemented by the adoption of the GitHub Copilot program to enhance developer productivity.
+Integrating GitHub Copilot has notably boosted our coding efficiency and cut down the time on routine tasks, accelerating our ML model and interface development.
