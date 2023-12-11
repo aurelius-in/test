@@ -1,4 +1,6 @@
-Based on the extensive meeting summaries you've provided, the following list of To-Dos (tasks and objectives) for app development can be distilled:
+## POD TO DOS:
+
+### ASAP:
 
 1. **Provider Performance Analysis (PPA) Tool**
    - Develop a comprehensive tool for PPA that can handle multiple TINs and provide insights into group and individual provider models.
