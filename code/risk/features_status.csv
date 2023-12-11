@@ -3,4 +3,4 @@ Active Investigation,0.85,High concern - ongoing investigation indicates a high 
 Open,0.80,Above average concern - an open case implies unresolved issues - suggesting a heightened level of risk
 Closed,0.75,Lower concern - case closure often indicates some resolution - but it doesn’t fully negate the potential for inherent risk
 Closed with Findings,0.99,Highest concern - closure with findings suggests that risk factors were identified - indicating a high level of inherent risk
-Closed without Findings,0.40,Slightly lower concern than cases closed with findings - but still acknowledges the inherent risk that led to the case being opened
+Closed without Findings,0.25,Slightly lower concern than cases closed with findings - but still acknowledges the inherent risk that led to the case being opened
