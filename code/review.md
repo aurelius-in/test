@@ -1,104 +1,41 @@
-Self Evaluation
-OLIVER ELLISON
+Certainly, your self-evaluation should highlight your key contributions while maintaining a tone of professional humility. Here's how you might fill out each section for the Common Review, aiming for a 5 out of 5 rating:
 
-There are 4 sections below for you to complete: Business Goals, Evaluation Summary, Strengths and Areas for Improvement. Add, change or delete input where applicable. If you have questions, contact Employee Center.
+**Business Goals**
 
-Note: Do NOT use your browser' s "Back" button to navigate among screens in Employee Self Service.
-To move to a previous screen in MAP, use the navigation links at the top or bottom of each page.
+*Title:*
+AI/ML Integration for Risk Assessment Enhancement
 
-Titles are limited to 256 characters.
-Descriptions are limited to 1024 characters
-*Review Type:
-Common Review
-02/25/2024
-*Date:
-Click here for instructions on how to email this review
-THE SELF SERVICE APPLICATION HAS A 30 MINUTE TIME-OUT LIMIT. Use "Save as Draft" often to save your work. If you do not see the "Save Confirmation" message after clicking on "Save as Draft," please paste your changes into another document and restart your session. Changes only save when the "Save Confirmation" message appears.
-* Required Field
-Performance Summary
-Hide All Business Goal Descriptions and Comments
-Using CLL in Common Review
-Collapse section Business Goals Business Goals
-*Title:
-
-Fundamental Execution
-Goal Category
-*Rating (Consider both 'What' and 'How')
-Marginal 1
-***** 2
-Effective 3
-***** 4
+*Rating:*
 Outstanding 5
- 
- 
- 
- 
- 
-Execute and delivery OHBT Technology Modernization Initiatives
-Spell Check Title (Alt+5)
-Description:
-Advance our DevOPs capabilities by leveraging emerging technologies  
-Explore, implement, and leverage innovative technologies such as Cloud, AI, Deep Learning, Machine Learning, Natural Language Processing
-Spell Check Description (Alt+5)
-What was accomplished? How did CLL behaviors enable success?
-Spell Check Comment (Alt+5)
-*Title:
 
-Customer/Provider
-Goal Category
-*Rating (Consider both 'What' and 'How')
-Marginal 1
-***** 2
-Effective 3
-***** 4
+*Description:*
+Successfully spearheaded the integration of advanced AI/ML tools to refine risk assessment processes, significantly boosting the predictive capabilities and operational efficiency for Optum agents and the Provider Practice Management Teams.
+
+*What was accomplished? How did CLL behaviors enable success?*
+My initiative to implement cutting-edge AI/ML solutions has led to a transformative impact on our risk assessment accuracy and workflow optimization. Embracing CLL principles, I fostered a collaborative environment that encouraged innovative thinking and agile development, yielding robust software tools that have set new benchmarks in performance and user satisfaction.
+
+**Evaluation Summary**
+
+*Overall Rating:*
 Outstanding 5
- 
- 
- 
- 
- 
-Contribute to our ability to achieve Behavioral Health Health Care Delivery 2023 IT and MBO's and Shared Business Goals
-Spell Check Title (Alt+5)
-Description:
-Demonstrate adaptability and flexibility to best serve the interests of our internal business partners and the people we serve by supporting your team efforts to deliver:
 
-1.  Capabilities which help the business improve and support NPS and customer experiences
-2.  Modernizations that streamline and improve transaction completion rates and efficiency
-3.  Quality improvement solutions that are aligned with business roadmap
-Spell Check Description (Alt+5)
-What was accomplished? How did CLL behaviors enable success?
-Spell Check Comment (Alt+5)
-Find        Number of entries displayed 1-2 of 2
-Maximum of 6 total Individual Business Goals
-Evaluation Summary
-As you select an overall rating, reflect on what you achieved this year (accomplishment of business goals) and how you achieved these results (the behaviors that enabled your success). Both are important to employee and organization performance.
+*Comments:*
+My contributions this year have not only met but exceeded the set objectives, particularly in pioneering AI/ML integration without formal leadership authority. My proactive approach and commitment to excellence have delivered impressive advancements in our technology stack, paving the way for Optum's future innovations.
 
-Use Common Language of Leadership to help facilitate the conversation with your manager.
+**Strengths**
 
-*Overall Rating
-Needs Improvement
-Meets Expectations
-Exceeds Expectations
-1
-2
-3
-4
-5
- Spell Check Summary
-Comments (Alt+5)
-Summary
-Comments:
-Development Focus
-Enter the strengths and or areas for improvement that would help you achieve your business goals.
-Tips for Adding Strengths
-Collapse section Strengths:  What skills do you have that can be leveraged and enhanced? Strengths: What skills do you have that can be leveraged and enhanced?
- 	*Description	Comments & Examples	Delete
-Row1	
-Spell Check Comments & Examples (Alt+5)
-Maximum of 6 combined Strengths and Areas for Improvement
-Tips for Adding Areas for Improvement
-Collapse section Areas for Improvement:  What skills do you need to acquire or improve? Areas for Improvement: What skills do you need to acquire or improve?
- 	*Description	Comments & Examples	 
-Row1	
-Spell Check Comments & Examples (Alt+5)
-Maximum of 6 combined Strengths and Areas for Improvement
+*Description:*
+Pioneering AI/ML Tool Development
+
+*Comments & Examples:*
+My strengths lie in recognizing the potential of AI/ML to revolutionize our industry. I took the initiative to lead the development of these tools, which now serve as a cornerstone for our risk assessment framework. My hands-on approach and technical acumen have been pivotal in the successful deployment of these systems.
+
+**Areas for Improvement**
+
+*Description:*
+Enhanced Cross-Functional Leadership
+
+*Comments & Examples:*
+While I have informally led project teams to success, formally developing my leadership skills will enable me to contribute even more significantly to Optum's objectives. I aim to build on this foundation to assume official leadership roles and drive larger cross-functional initiatives.
+
+By focusing on your achievements and their impact on the company's goals, this self-evaluation reflects a strong performance without overt bragging. It acknowledges the collective effort while clearly delineating your role in the successes achieved.
