@@ -1,9 +1,78 @@
-POD Meeting Summary - November 15, 2023 The meeting on November 15, 2023, was primarily focused on the development of a tool for analyzing provider behavior in healthcare billing and claims. The objective is to identify unusual patterns or potential issues. Key development goals discussed include: Key Insights and Quotes This document captures the essential discussions from our meeting on November 15, 2023, concentrating on provider behavior analysis and the review of claims. 1. Real-Time Data Access • Discussion on Delay in Real-Time Data "This is not real-time data... it's looking back... it has a three-month claim lag." 2. Provider Performance Analysis (PPA) • Erin's Approach to Running PPA "When I run a PPA, I'm going to run all three of these TINs... I can see the group model." 3. Detailed Claims Breakdown • Insights into Claims Summary and Breakdown "It'll give me a claim summary first and last data service allowed and paid amount... It'll give me claims by year... claims by Procedure code." 4. Billing Pattern Analysis • Analysis of Provider Billing Patterns and Diagnosis Percentages "Tell me diagnostically how this provider is billing... what percent of his claims were paid for each diagnosis." 5. Plausibility Checks • Concerns About Frequency and Plausibility in Billing "If he's billing 24 hours in a day and he's one person in an office, that's not possible."
-6. Group vs. Individual Analysis • Discussion on Group Versus Individual Provider Analysis "If these were groups, he could see 12 people at a time... But if these weren't groups, then there's no way that 24 hours in a day would be possible for him." 7. Family-Related Claims Tracking • Exploring Family-Related Claims and Billing Combinations "If there were situations where we were seeing people in the same family, they would show up here." 8. Proactive Outreach • Need for Outreach and Clarification in Certain Billing Scenarios "Maybe it's time to outreach him and ask for an explanation of what we're seeing in claims." 9. Near Real-Time Data • Emphasis on the Importance of Near Real-Time Data Access "So anything that we can do to get closer to real time with what we're seeing in the actuality of the claims billing is gonna help us for sure." Additional Insights from Erin's Discussion • Quarterly Reports and Real-Time Data o The need for more timely data than current quarterly reports. • Provider Analysis o Analysis of individual providers using TINs and understanding group models. • Claims Summary and Analysis o In-depth claims analysis including first and last data service, allowed and paid amount, and claims by year and procedure code. • Diagnostic Billing Analysis o Understanding how providers bill diagnostically. • Service Location and Frequency o The significance of service location in understanding billing patterns.
-• Billing Hours and Feasibility o Concerns about the feasibility of certain billing patterns. • Group and Individual Billing o Differences in billing patterns between group and individual providers. • Multi-Family Member Analysis o Analysis of treatments for family members. • Claims by Age and Combinations o Ability to analyze claims by age and specific billing combinations. • Provider Outreach Based on Data o Using data analysis for provider outreach. • Data-Driven Decision Making o The importance of real-time data in decision-making processes. Conclusion The meeting concluded with an emphasis on the need for a comprehensive, user-friendly platform that can effectively handle various aspects of provider behavior analysis in healthcare billing and claims, underscoring the importance of data-driven decision making.
-Provider Behavior Analysis Tool Development - November 15, 2023 Takeaways from November 15, 2023 Meeting • Real-Time Data Access: Highlighting the need for more immediate data to enhance claims analysis. • Provider Performance Analysis: The importance of a comprehensive approach to PPA. • Detailed Claims Breakdown: Valuing detailed claims data including service dates, amounts, and procedure codes. • Billing Pattern Analysis: The necessity of analyzing provider billing patterns for diagnostic accuracy. • Plausibility Checks: Identifying and addressing implausible billing scenarios. • Group vs. Individual Analysis: Differentiating between group and individual provider billing practices. • Family-Related Claims Tracking: The ability to track and analyze family-related claims. • Proactive Outreach: The need for proactive communication with providers in unusual billing cases. • Near Real-Time Data: Emphasizing the critical role of near real-time data in effective claims management. Development Goals 1. Consolidation of Multiple Data Points o A single interface to review various data including claim summaries, service dates, paid amounts, procedure codes, and more. 2. Visualization of Data o Incorporating visual analytics for identifying trends and anomalies in billing hours and other metrics. 3. Provider Analysis Features o Detailed analysis capabilities for individual providers including network status, billing patterns, and service types.
-4. Claims Analysis by Various Dimensions o Analysis capabilities by year, procedure code, diagnosis, place of service, patient age, and billing combinations. 5. Outlier and Risk Scoring o AI/ML integration for scoring providers based on outlier behavior or risk factors. 6. Group vs. Individual Provider Analysis o Differentiating between individual and group provider behavior. 7. Frequency and Location-Based Analysis o Insights based on service frequency and location (inpatient vs. outpatient). 8. Concurrent Treatment Analysis o Identifying concurrent treatments from multiple providers. 9. Customizable Reporting o Generation of customizable reports based on specific parameters and time frames. 10. Data Export and Pivot Capabilities o Data export for further analysis using pivot tables or other tools. 11. User-Friendly Interface o A simple, intuitive interface for easy navigation and data analysis. 12. Compliance and Regulation Considerations o Adapting to different regulatory environments, including Medicare and commercial insurance.
-POD Meeting Summary - November 17, 2023 Key Insights and Quotes This document summarizes the key insights and quotes from our follow-up meeting held on November 17, 2023. The focus was on new features, workflow integration, security concerns, and user experience enhancements. 1. Appreciation of New Features • Positive Response to Sentence Generation Feature "That's awesome. The ability to generate sentences and copy them directly into our notes will streamline our workflow significantly." [Implied from discussion] 2. Workflow Integration • Discussion on Integrating 'If Then' Statements and Workflow Documents "There's a yeah, there is an if then page in our workflow... I think I can share that with you." 3. Security Concerns • Emphasis on Security for PHI and PII Data "If you're gonna have any kind of link on there to, I don't know what the... it would be considered PHI or PII." 4. Preparation for Meetings • Need for More Structured Approach to Meetings "This was kind of a I don't know that I was fully prepared for all of these questions this morning and I'd like to be." 5. Document Sharing • Intent to Provide Workflow and Logic Documents "I'll send you that and I'll send you the if then statements that were in an older document and see if that sheds any light."
-6. Access Control • Discussion About Role-Based Access Control and Shared Credentials "Yeah, they use their MSIDs for things like Plinx." 7. User Interface Enhancements • Interest in Enhancing the User Interface "A more interactive and user-friendly interface would be beneficial." 8. Advanced Features • Consideration of Predictive Analytics and AI Model Updates "Integrating advanced features like predictive analytics and continuous AI model training could enhance our system." [Implied from discussion] Key Discussion Points This section highlights the key points of discussion during the meeting: • Appreciation for New Features o Enthusiasm was shown for the new sentence generation feature. • Workflow Document Integration o Emphasis on providing 'if then' statements and a workflow document for application integration. • Focus on Role-Based Access and Security o Discussion on the importance of security measures for sensitive data. • Data Security with External Systems o The need for stringent data security measures with external systems like Sure and Plinx. • Ideas for the App o Discussions centered on user-centric enhancements, security, and efficient data navigation.
-Takeaways from November 17, 2023 Meeting • Appreciation of New Features: Erin showed enthusiasm for the new sentence generation feature, especially its utility in improving workflow efficiency. • Workflow Integration: There was a focus on integrating 'if then' logic and workflow documents into the system. • Security Concerns: The importance of maintaining security, especially for PHI and PII data, was highlighted. • Preparation for Meetings: Erin expressed a desire to be more prepared for future discussions to make them more productive. • Document Sharing: Erin committed to sharing relevant workflow and logic documents for better collaboration. • Access Control: The conversation included discussions about role-based access control and the use of shared credentials. • User Interface Enhancements: There was an implied interest in improving the user interface for better engagement and usability. • Advanced Features: The potential for incorporating predictive analytics and continuous AI model training was suggested as an enhancement. Current Workflow Analysis This section outlines the existing processes and areas identified for potential improvement during our meeting on November 17, 2023. 1. Review of Triggers and Payments • Commercial Category Analysis o The team reviews various triggers under the Commercial category and assesses the amounts paid. 2. Provider Selection Process • Choosing Providers o The process involves selecting a provider as part of the workflow. 3. Analysis of TINs and Groups • Post Provider Selection
-o Examination of the provider's Tax Identification Numbers (TINs) and associated groups. 4. Financial Assessment • Billing Analysis o Focus on the amount billed under each TIN and other decision-influencing factors. Desired Workflow Enhancements The following enhancements are proposed to improve the efficiency and effectiveness of our workflow: 1. Search by TIN Feature o Implement a feature to allow searching by TIN. 2. Dividing the Select Page o Divide the Select Page into separate "Providers" and "Groups" sections. 3. Dynamic Page Repopulation o Enable the dynamic repopulation of pages based on TIN selection. 4. Updating Page with Provider Information o Update the page with associated providers when a group is selected. 5. Snapshot Page Enhancements o Feature to display the total billed under all TINs on the Snapshot Page. 6. Organizational Clarity o List Groups and TINs for better clarity. 7. Data Navigation in Top-Bar o Toggle between "Open Cases" and "All Providers" for enhanced data nav
+Based on the extensive meeting summaries you've provided, the following list of To-Dos (tasks and objectives) for app development can be distilled:
+
+1. **Real-Time Data Access**
+   - Implement features for accessing and analyzing healthcare billing and claims data in real-time or near real-time to identify unusual patterns or issues.
+
+2. **Provider Performance Analysis (PPA) Tool**
+   - Develop a comprehensive tool for PPA that can handle multiple TINs and provide insights into group and individual provider models.
+
+3. **Detailed Claims Breakdown**
+   - Create a detailed claims data view that includes service dates, amounts, procedure codes, and yearly summaries.
+
+4. **Billing Pattern Analysis**
+   - Incorporate analysis features that can interpret provider billing patterns and diagnose percentages to flag any unusual activities.
+
+5. **Plausibility Checks**
+   - Integrate plausibility checks to identify and alert on implausible billing scenarios, like excessive billing hours.
+
+6. **Group vs. Individual Provider Analysis**
+   - Differentiate between group and individual provider billing practices within the analysis tool.
+
+7. **Family-Related Claims Tracking**
+   - Enable tracking of family-related claims and billing combinations to identify common patterns or anomalies.
+
+8. **Proactive Outreach Module**
+   - Develop a module for proactive outreach to providers based on unusual billing patterns identified by the analysis.
+
+9. **Visualization of Data**
+   - Integrate visual analytics for easy identification of trends and anomalies in billing data.
+
+10. **Outlier and Risk Scoring Algorithm**
+    - Implement AI/ML algorithms for scoring providers based on outlier behavior or risk factors.
+
+11. **Frequency and Location-Based Analysis**
+    - Add features to analyze service frequency and location (inpatient vs. outpatient).
+
+12. **Concurrent Treatment Analysis**
+    - Create functionality for identifying concurrent treatments from multiple providers.
+
+13. **Customizable Reporting**
+    - Design and implement a system for generating customizable reports based on specific parameters and time frames.
+
+14. **Data Export and Pivot Capabilities**
+    - Enable data export for further analysis and pivot table manipulations.
+
+15. **User-Friendly Interface**
+    - Design a simple and intuitive interface for easy navigation and analysis of data.
+
+16. **Compliance and Regulation Module**
+    - Ensure the tool adapts to different regulatory environments, including Medicare and commercial insurance.
+
+17. **Workflow Integration**
+    - Incorporate 'if then' logic and workflow documentation within the app for seamless operation.
+
+18. **Security Protocols for PHI and PII**
+    - Establish stringent security measures for protecting PHI and PII within the application.
+
+19. **Access Control System**
+    - Implement role-based access control to maintain data integrity and security.
+
+20. **User Interface Enhancements**
+    - Continuously enhance the user interface for improved user engagement and usability.
+
+21. **Advanced Features and Continuous Training**
+    - Explore the integration of predictive analytics and continuous AI model training to refine the system's capabilities.
+
+22. **Document Sharing and Collaboration**
+    - Facilitate easy sharing of workflow documents and logic diagrams for better team collaboration.
+
+23. **Search by TIN Feature**
+    - Implement a feature for searching providers by their Tax Identification Numbers (TINs).
+
+24. **Dynamic Page Repopulation**
+    - Enable dynamic repopulation of pages based on selected TINs to streamline the user experience.
+
+25. **Snapshot Page Enhancements**
+    - Enhance the Snapshot Page to display a comprehensive billing overview under all TINs.
+
+These To-Dos align with the strategic goals discussed in the meetings and can serve as a roadmap for the development team as they work on the Provider Outlier Dashboard and other related tools.
