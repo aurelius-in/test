@@ -1,30 +1,20 @@
-Understood. Here's a revised email that conveys the necessary information in a friendly, yet professional tone:
-
----
-
-Subject: Follow-Up on ML Presentation and Upcoming Alignment Discussion
+Subject: Follow-Up on ML Methods and Alignment
 
 Hello Team,
 
-I hope this message finds you well. Following our presentation last week, Aled and I have been diligently working on addressing the questions and feedback we received. As I'll be taking some time off soon, I want to ensure we're all on the same page regarding our ML project.
+Following our presentation last week, Alec and I have been diligently documenting our process for your review and working on addressing the questions and feedback we received. As I'll be taking some time off soon (for the rest of 2023 starting Thursday), I want to ensure we've provided the details needed to properly pass the ML baton back to you.  
 
-To facilitate this, we've prepared detailed notes and responses to the Q&A session, along with a summary of the steps we've taken since the presentation. These documents aim to provide clarity and encourage alignment on our current ML strategies.
+During the Wednesday meeting, we'd like to go through our detailed notes and responses to the Q&A session, and summarirze the preprocessing steps we've taken (and reworked) since the presentation to offer as much clarity as possible and encourage alignment on our current ML strategies.
 
-I would like to invite you to a meeting this Wednesday to discuss these materials in detail. Your insights and experiences are crucial, and this meeting will be a valuable opportunity to align our understanding and approach. Here’s the agenda:
+If you can attend a meeting this Wednesday, I think it may be beneficial to quickly touch upon any lingering insights to align our collective understanding of the problem and approaches. 
 
-1. Review of the post-presentation documentation and Q&A responses.
-2. Discussion on the current status of our ML models and processes.
-3. Identifying any areas requiring further clarification or alignment.
-4. Sharing thoughts and suggestions for ongoing and future work.
+We hope to briefly:
+1. Introduce our post-presentation documentation and Q&A responses.
+2. Review the current status of our ML models and preprocessing steps.
+3. Identify any areas requiring further clarification or alignment.
+4. Allow for thoughts and suggestions from the team.
 
-Your expertise and perspectives are highly valued, and I believe this session will significantly enhance our collective efforts. Please have a look at the attached documents before our meeting.
-
-Looking forward to an engaging and productive discussion.
+Your expertise and perspectives are highly valued, and I hope a quick meeting can culminate in greater alignment on the solution.
 
 Best regards,
-
-[Your Name]
-
----
-
-This email strikes a balance between friendly and professional, ensuring that your team is informed and prepared for the upcoming meeting. Feel free to tweak it to better suit your style or to include any additional details you deem necessary.
+Oliver
