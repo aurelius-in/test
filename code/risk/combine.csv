@@ -1,0 +1,11 @@
+import pandas as pd
+
+# Load the CSV files
+providers_actions_df = pd.read_csv('providers_actions.csv')
+providersX_df = pd.read_csv('providersX.csv')
+
+# Merge the DataFrames based on 'PRCP ID'
+merged_df = pd.merge(providers_actions_df, providersX_df, on='PRCP ID', how='inner')
+
+# Save the merged DataFrame to a new CSV file
+merged_df.to_csv('raw_labeled_providers_all_features.csv', index=False)
