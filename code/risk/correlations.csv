@@ -1,0 +1,76 @@
+Top 36 features correlated with Label Score:
+PassScore                  0.809940
+StatusScore                0.683848
+>3 Diag Eval Pt Cnt        0.664706
+CommentsScore              0.515268
+% Vst >3 Diag Eval         0.509009
+% Pt >3 Diag Eval          0.426142
+% $ Pd High Cost E/M       0.395496
+Crisis Overall Pt Cnt      0.363101
+Mult Therapy/Day Pt Cnt    0.357388
+% Vst Crisis Overall       0.348234
+OpenDtScore                0.297405
+% Pt Mult Therapy/Day      0.284451
+% $ Pd Non-MD CPT          0.254172
+% Vst High Cost E/M        0.250143
+% Vst High Cost E/M.1      0.250143
+% $ Pd Phone Svcs          0.238891
+% Vst Crisis Add On        0.229290
+% $ Pd Crisis Overall      0.208887
+% Pt High Cost E/M         0.159946
+% Pt Interact Cmplx        0.159339
+% Vst Phone Svcs           0.146545
+% Pt Non-MD CPT            0.142654
+% Vst Interact Cmplx       0.138594
+% $ Pd >3 Diag Eval        0.136371
+Mult Mbr Fam Cnt           0.127669
+% $ Pd Interact Cmplx      0.114851
+% Pt Crisis Add On         0.101925
+$ Concurr Treat Pd         0.087705
+Unnamed: 97                0.087160
+% Days >8 Hour/Day         0.087160
+$ Freq Vst Pd              0.086817
+% $ Pd Crisis Add On       0.060094
+Days >8 Hour/Day           0.057052
+Concurr Treat Pt Cnt.1     0.056845
+Interact Cmplx Pt Cnt      0.038760
+Interact Cmplx Vst Cnt     0.038760
+Name: Label Score, dtype: float64
+
+Top 36 features correlated with Feature Score:
+% $ Pd Unbundling                0.999893
+% Vst Unbundling                 0.999773
+$ Unbundling Pd                  0.996578
+% Pt Unbundling                  0.921816
+$ >3 Diag Eval Pd                0.854330
+$ Crisis Overall Pd              0.812090
+Crisis Overall Vst Cnt           0.796506
+>3 Diag Eval Vst Cnt             0.781971
+% Vst X-billing                  0.553672
+% $ Pd Diff State Treat          0.525652
+% Pt X-billing                   0.516402
+$ Psychother Add On E/M Pd       0.509300
+% Pt Mult Therapy/Day            0.508939
+Psychother Add On E/M Pt Cnt     0.472572
+Psychother Add On E/M Vst Cnt    0.472572
+% Vst Diff State Treat           0.469809
+% Vst Interact Cmplx             0.467789
+% Pt Diff State Treat            0.452451
+% Week Freq Vst                  0.448922
+% Pt Concurr Treat.1             0.447012
+Crisis Overall Pt Cnt            0.444704
+% $ Pd Interact Cmplx            0.443190
+Freq Vst Week Cnt                0.441695
+% Pt Concurr Treat.2             0.438614
+% Pt Concurr Treat               0.433445
+% Pt Interact Cmplx              0.431805
+% Pt Non-MD CPT                  0.419753
+X-billing Vst Cnt                0.399970
+High Cost E/M Pt Cnt             0.398505
+% Pt >3 Diag Eval                0.394517
+Days >8 Hour/Day                 0.382258
+Tot Week Cnt                     0.378513
+Unnamed: 97                      0.364691
+% Days >8 Hour/Day               0.364691
+$ Phone Svcs Pd                  0.356876
+% $ Pd X-billing                 0.354976
