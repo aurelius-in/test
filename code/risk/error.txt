@@ -1,21 +1,33 @@
-pip install pandas matplotlib
 import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the data
 risk_df = pd.read_csv('risk_level.csv')
 
-# Assuming the risk level values are already scaled to 1 (low), 2 (moderate), 3 (high)
-risk_counts = risk_df['Risk Level'].value_counts().sort_index()
+# Define the categories
+def categorize(risk_level):
+    if 1 <= risk_level < 2:
+        return '1 to 2'
+    elif 2 <= risk_level < 2.5:
+        return '2 to 2.5'
+    elif 2.5 <= risk_level <= 3:
+        return '2.5 to 3'
+    else:
+        return 'Other'
+
+# Apply categorization
+risk_df['Risk Category'] = risk_df['Risk Level'].apply(categorize)
+
+# Count the number in each category
+category_counts = risk_df['Risk Category'].value_counts()
 
 # Print the counts
-print("Risk Level Counts:")
-print(risk_counts)
+print("Risk Category Counts:")
+print(category_counts)
 
 # Graph the categorization
-plt.bar(risk_counts.index, risk_counts.values)
-plt.xlabel('Risk Level')
+plt.bar(category_counts.index, category_counts.values)
+plt.xlabel('Risk Category')
 plt.ylabel('Number of Providers')
-plt.title('Provider Risk Level Distribution')
-plt.xticks([1, 2, 3], ['Low (1)', 'Moderate (2)', 'High (3)'])
+plt.title('Provider Risk Category Distribution')
 plt.show()
