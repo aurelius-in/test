@@ -1,0 +1,17 @@
+import pandas as pd
+
+# Load the CSV files
+labeled_providers_df = pd.read_csv('labeled_providers_all_features.csv')
+feature_mentions_df = pd.read_csv('feature_mentions.csv')
+
+# Create a dictionary for quick access to ranks based on feature
+feature_ranks = dict(zip(feature_mentions_df['Feature'], feature_mentions_df['Rank']))
+
+# Calculate the Feature Score
+labeled_providers_df['Feature Score'] = labeled_providers_df.apply(
+    lambda row: sum(row[feature] / feature_ranks[feature] for feature in feature_ranks if feature in row),
+    axis=1
+)
+
+# Save the updated DataFrame to a new CSV file
+labeled_providers_df.to_csv('labeled_providers_all_features_with_scores.csv', index=False)
