@@ -1,4 +1,5 @@
-1000485792	6/2/23-open to Queue--EDW only--need post intervention PPA-assign-missed PNI from Erin S.  Gayna to assume case.  Committee and PNI needed ASAP.
-1000577787	6/30/23:  SW in WI - long daysâ€¦.does have longer days  EDW which could be SP--will not outreach currently.  This would be the only pattern.
-1000580769	6/9/23--MD Fl - Therapy add on codes are mainly 90833. Slightly long day but it is EM and 90833 (11 mbrs). No other patterns worthy of outreach. 
-1000924694	5/5/23:  Went to Over on 5/2-being opened to PS team---email was sent to TJ-open to PS and currently being addressed
+PRCP ID,Comment Score,Reason
+1000485792,0.5,"Open to Queue, missed PNI, needs committee and PNI ASAP, moderate risk."
+1000577787,0.35,"SW in WI, long days on EDW, could be SP, no outreach currently, low to moderate risk."
+1000580769,0.3,"MD in FL, therapy add-on codes mainly 90833, slightly long day but manageable, low to moderate risk."
+1000924694,0.4,"Opened to PS team, being addressed, moderate risk."
