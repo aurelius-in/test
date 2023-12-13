@@ -1,0 +1,4 @@
+In Ntwk,Weight,Reason
+Y,0.60,Lower risk as in-network providers typically have more oversight and contractual obligations that may reduce opportunities for fraud
+N,0.80,Higher risk due to potentially less oversight and regulatory scrutiny for out-of-network providers increasing opportunities for fraud
+U,0.90,Highest risk due to the unknown or unclear status of the provider which might correlate with less transparency and higher potential for fraudulent activities
