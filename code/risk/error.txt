@@ -1,0 +1,75 @@
+/tmp/ipykernel_11465/979579853.py:4: DtypeWarning: Columns (44,101,104,105) have mixed types. Specify dtype option on import or set low_memory=False.
+  providers_df = pd.read_csv(labels_dir + 'labeled_providers_all_features.csv')
+---------------------------------------------------------------------------
+UFuncTypeError                            Traceback (most recent call last)
+Cell In[2], line 25
+     22         providers_df['Risk Score'] += providers_df[feature] / rank
+     24 # Save the updated DataFrame to a new CSV file
+---> 25 providers_df.to_csv(providers_df + 'providers_with_risk_scores.csv', index=False)
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/ops/common.py:81, in _unpack_zerodim_and_defer.<locals>.new_method(self, other)
+     77             return NotImplemented
+     79 other = item_from_zerodim(other)
+---> 81 return method(self, other)
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/arraylike.py:186, in OpsMixin.__add__(self, other)
+     98 @unpack_zerodim_and_defer("__add__")
+     99 def __add__(self, other):
+    100     """
+    101     Get Addition of DataFrame and other, column-wise.
+    102 
+   (...)
+    184     moose     3.0     NaN
+    185     """
+--> 186     return self._arith_method(other, operator.add)
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/frame.py:7457, in DataFrame._arith_method(self, other, op)
+   7453 other = ops.maybe_prepare_scalar_for_op(other, (self.shape[axis],))
+   7455 self, other = ops.align_method_FRAME(self, other, axis, flex=True, level=None)
+-> 7457 new_data = self._dispatch_frame_op(other, op, axis=axis)
+   7458 return self._construct_result(new_data)
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/frame.py:7484, in DataFrame._dispatch_frame_op(self, right, func, axis)
+   7481 if not is_list_like(right):
+   7482     # i.e. scalar, faster than checking np.ndim(right) == 0
+   7483     with np.errstate(all="ignore"):
+-> 7484         bm = self._mgr.apply(array_op, right=right)
+   7485     return self._constructor(bm)
+   7487 elif isinstance(right, DataFrame):
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/internals/managers.py:350, in BaseBlockManager.apply(self, f, align_keys, **kwargs)
+    347             kwargs[k] = obj[b.mgr_locs.indexer]
+    349 if callable(f):
+--> 350     applied = b.apply(f, **kwargs)
+    351 else:
+    352     applied = getattr(b, f)(**kwargs)
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/internals/blocks.py:329, in Block.apply(self, func, **kwargs)
+    323 @final
+    324 def apply(self, func, **kwargs) -> list[Block]:
+    325     """
+    326     apply the function to my values; return a block if we are not
+    327     one
+    328     """
+--> 329     result = func(self.values, **kwargs)
+    331     return self._split_op_result(result)
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/ops/array_ops.py:232, in arithmetic_op(left, right, op)
+    228     _bool_arith_check(op, left, right)
+    230     # error: Argument 1 to "_na_arithmetic_op" has incompatible type
+    231     # "Union[ExtensionArray, ndarray[Any, Any]]"; expected "ndarray[Any, Any]"
+--> 232     res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+    234 return res_values
+
+File /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/ops/array_ops.py:171, in _na_arithmetic_op(left, right, op, is_cmp)
+    168     func = partial(expressions.evaluate, op)
+    170 try:
+--> 171     result = func(left, right)
+    172 except TypeError:
+    173     if not is_cmp and (is_object_dtype(left.dtype) or is_object_dtype(right)):
+    174         # For object dtype, fallback to a masked operation (only operating
+    175         #  on the non-missing values)
+    176         # Don't do this for comparisons, as that will handle complex numbers
+    177         #  incorrectly, see GH#32047
+
+UFuncTypeError: ufunc 'add' did not contain a loop with signature matching types (dtype('float64'), dtype('<U30')) -> None
