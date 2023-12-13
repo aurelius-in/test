@@ -1,0 +1,27 @@
+# Save the updated DataFrame to a new CSV file
+
+import pandas as pd
+
+# Load the data
+providers_df = pd.read_csv(labels_dir + 'labeled_providers_all_features.csv')
+feature_mentions_df = pd.read_csv(feature_dir + 'features_mentions.csv')
+
+# Create a dictionary for ranks
+feature_ranks = dict(zip(feature_mentions_df['Feature'], feature_mentions_df['Rank']))
+
+# Initialize a new column for risk score
+providers_df['Risk Score'] = 0
+
+# Process each feature mentioned
+for feature, rank in feature_ranks.items():
+    if feature in providers_df.columns:
+        # Replace NaNs and zeros to avoid divide-by-zero errors
+        providers_df[feature] = providers_df[feature].replace({0: pd.NA})
+        providers_df[feature] = pd.to_numeric(providers_df[feature], errors='coerce')
+        providers_df[feature].fillna(providers_df[feature].quantile(0.25), inplace=True)
+
+        # Add the normalized feature to the risk score
+        providers_df['Risk Score'] += providers_df[feature] / rank
+
+# Save the updated DataFrame to a new CSV file
+providers_df.to_csv(provider_dir + 'providers_comment_risk_scores.csv', index=False)
