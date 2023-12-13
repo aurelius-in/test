@@ -1,35 +1,35 @@
 ## # Visits...
-- Number of Visits Involving More Than Three Diagnoses
-- Number of Visits with Concurrent Treatments
-- Number of Visits with Crisis Add-On Services
-- Number of Visits Involving Crisis Situations
-- Number of Visits for Out-of-State Treatments
-- Number of Visits Classified as Frequent
-- Number of Visits Involving High-Cost E/M Services
-- Number of Visits with Interactive Complexity
-- Number of Visits with Multiple Therapy Sessions in a Day
-- Number of Visits Involving Non-MD CPT Services
-- Number of Visits Involving Phone Services
-- Number of Visits with Psychotherapy Add-On to E/M
-- Number of Visits Involving Unbundled Services
-- Number of Visits Involving Cross-Billing
+- [ ] Visits Involving More Than Three Diagnoses
+- [ ] Visits with Concurrent Treatments
+- [ ] Visits with Crisis Add-On Services
+- [ ] Visits Involving Crisis Situations
+- [ ] Visits for Out-of-State Treatments
+- [ ] Visits Classified as Frequent
+- [ ] Visits Involving High-Cost E/M Services
+- [ ] Visits with Interactive Complexity
+- [ ] Visits with Multiple Therapy Sessions in a Day
+- [ ] Visits Involving Non-MD CPT Services
+- [ ] Visits Involving Phone Services
+- [ ] Visits with Psychotherapy Add-On to E/M
+- [ ] Visits Involving Unbundled Services
+- [ ] Visits Involving Cross-Billing
 
 ## Recent...
-- Current Status of the Most Recent Case
-- Reason for Passing on the Most Recent Case
-- Opening Date of the Most Recent Case
-- Closing Date of the Most Recent Case
-- Date of the Most Recent Data Mining Activity Update
+- [ ] Case Status
+- [ ] Reason for Pass
+- [ ] Opening Date
+- [ ] Closing Date
+- [ ]  Data Mining Activity
 
 ## Total...
-- Total Number of Taxpayer Identification Numbers (TINs)
-- Total Number of Days Patients Were Seen
-- Total Number of Families Treated
-- Total Number of Patients Treated
-- Total Number of Patients in Caseload
-- Total Number of Visits
-- Total Number of Weeks Counted
-- Number of Patients Receiving Unbundled Services
-- Number of Visits Involving Unbundled Services
-- Number of Patients Involved in Cross-Billing
-- Number of Visits Involving Cross-Billing
+- [ ] Taxpayer Identification Numbers (TINs)
+- [ ] Days Patients Were Seen
+- [ ] Families Treated
+- [ ] Patients Treated
+- [ ] Patients in Caseload
+- [ ] Visits
+- [ ] Weeks Counted
+- [ ] Patients Receiving Unbundled Services
+- [ ] Visits Involving Unbundled Services
+- [ ] Patients Involved in Cross-Billing
+- [ ] Visits Involving Cross-Billing
