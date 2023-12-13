@@ -1,24 +1,21 @@
+pip install pandas matplotlib
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Load the data
-providers_df = pd.read_csv('labeled_providers_all_features.csv')
-feature_mentions_df = pd.read_csv('feature_mentions.csv')
+risk_df = pd.read_csv('risk_level.csv')
 
-# Create a dictionary for ranks
-feature_ranks = dict(zip(feature_mentions_df['Feature'], feature_mentions_df['Rank']))
+# Assuming the risk level values are already scaled to 1 (low), 2 (moderate), 3 (high)
+risk_counts = risk_df['Risk Level'].value_counts().sort_index()
 
-# Initialize a new column for risk score
-providers_df['Risk Score'] = 0
+# Print the counts
+print("Risk Level Counts:")
+print(risk_counts)
 
-# Process each feature mentioned
-for feature, rank in feature_ranks.items():
-    if feature in providers_df.columns and feature != 'PRCP ID':
-        # Convert to numeric and handle NaNs
-        providers_df[feature] = pd.to_numeric(providers_df[feature], errors='coerce')
-        providers_df[feature].fillna(providers_df[feature].quantile(0.25), inplace=True)
-
-        # Add the normalized feature to the risk score
-        providers_df['Risk Score'] += providers_df[feature] / rank
-
-# Save the updated DataFrame to a new CSV file
-providers_df.to_csv('providers_with_risk_scores.csv', index=False)
+# Graph the categorization
+plt.bar(risk_counts.index, risk_counts.values)
+plt.xlabel('Risk Level')
+plt.ylabel('Number of Providers')
+plt.title('Provider Risk Level Distribution')
+plt.xticks([1, 2, 3], ['Low (1)', 'Moderate (2)', 'High (3)'])
+plt.show()
