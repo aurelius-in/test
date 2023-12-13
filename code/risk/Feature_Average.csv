@@ -1,1 +1,21 @@
+import pandas as pd
 
+# Load the CSV file
+df = pd.read_csv('all_labeled_combined.csv')
+
+# List of columns to exclude from the average calculation
+exclude_columns = ['CommentScore', 'PassScore', 'StatusScore', 'Label Score', 
+                   'MiningDtScore', 'CloseDtScore', 'OpenDtScore']
+
+# Replace NaN values with the 25th percentile in each column, excluding specified columns
+for col in df.columns:
+    if col not in exclude_columns and col != 'PRCP ID':  # Excluding specified columns and 'PRCP ID'
+        percentile_25th = df[col].quantile(0.25)
+        df[col].fillna(percentile_25th, inplace=True)
+
+# Calculate the average for each row, excluding specified columns and 'PRCP ID'
+columns_for_average = [col for col in df.columns if col not in exclude_columns and col != 'PRCP ID']
+df['Feature Average'] = df[columns_for_average].mean(axis=1)
+
+# Save the updated DataFrame to a new CSV file
+df.to_csv('all_labeled_combined_with_average.csv', index=False)
