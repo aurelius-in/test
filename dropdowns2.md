@@ -1,5 +1,5 @@
 ## # Visits...
-- [ ] Involving More Than Three Diagnoses
+- [x] Involving More Than Three Diagnoses
 - [ ] with Concurrent Treatments
 - [ ] with Crisis Add-On Services
 - [ ] Involving Crisis Situations
@@ -15,14 +15,14 @@
 - [ ] Involving Cross-Billing
 
 ## Recent...
-- [ ] Case Status
+- [x] Case Status
 - [ ] Reason for Pass
 - [ ] Opening Date
 - [ ] Closing Date
 - [ ]  Data Mining Activity
 
 ## Total...
-- [ ] Taxpayer Identification Numbers (TINs)
+- [x] Taxpayer Identification Numbers (TINs)
 - [ ] Days Patients Were Seen
 - [ ] Families Treated
 - [ ] Patients Treated
