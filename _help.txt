@@ -1,11 +1,11 @@
-I am sorry but this deck doesn't look good to me at all.  you will need 4 slides on deck, 
+My manager, Jun, respomded: "if you transcribed the notes from the meeting then how did you not understand what I wanted? you have the slides, so make it look like that! Tou didnt do what I asked.  I am sorry but this deck doesn't look good to me at all.  you will need 4 slides on deck, 4 SLIDES NOT ONE!!
 slide #1: problem statement/value statement
 slide #2: technical solution
 Slide #3: product roadmap - this is from Vijay's backlog
 Slide #4: execution plan, include each quarter but Q1 2024 with detailed monthly plan. 
-put the ML solution on one slide. I can accept it tonight, but the deck above was disappointed. I would like to see the details we agreed upon in today's version. sorry I have to let you know that feedback, hopefully you think it is reasonable. 
+put the ML solution on one slide. I can accept it tonight, but the deck you provided was very disappointing. I would like to see the details we agreed upon in today's version. sorry I have to let you know that feedback, hopefully you think it is reasonable." 
 
-here are some of our notes from previous weeks about the AI/ML implementation that may give you enough context to complete 4 Q1-Q4 slides per his above feedback:
+here are some of our notes from previous weeks about the AI/ML implementation that may give you enough context to complete 4 Q1-Q4 slides per Jun's feedback:
 
 **Presentation: Advanced Risk Scoring with XGBoost Using Dual Targets**
 
@@ -487,4 +487,4 @@ the format for the slides is below but the content needsd a lot of work.
 - TBD | Finalize year-end ML feature updates and set goals for the next year.
 Ensure the revised plan is consistently formatted so that each quarter has the same subheadings for consistency and allows for the alignment of tasks under these categories, with a focus on ML aspects and most deliverables concentrated in Q1.
  
-
+also use the transcript I provided, the attached slides and consider that we are creating the POD app as our product and its main feature is ML-based risk scoring 
