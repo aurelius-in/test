@@ -1,4 +1,4 @@
-## **Enhancing Risk Assessment through Synergistic Use of Variational Autoencoders and XGBoost
+## **Enhancing Risk Assessment through Synergistic Use of Variational Autoencoders and XGBoost**
 
 ---
 
