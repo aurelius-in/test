@@ -95,7 +95,3 @@ DICABERS, with its innovative integration of LLM, VAE, and XGBoost, stands as a 
 The results from this comprehensive evaluation affirm DICABERS as not only a technically sound solution but also as a practically viable tool in risk assessment and decision-making processes. Its success in balancing precision and recall, coupled with its ability to discern between varying risk levels, positions it as a valuable asset in data-driven industries.
 
 As we look to the future, the focus will be on refining DICABERS further, exploring its scalability, and extending its application to other domains. The potential of DICABERS in contributing to more informed, data-driven decisions is vast, and its ongoing development will undoubtedly continue to push the boundaries of what is possible in AI-powered risk analysis.
-
----
-
-This report, therefore, serves as a testament to the capabilities of DICABERS and lays the foundation for its continued evolution and adaptation in the ever-changing landscape of AI and machine learning.
