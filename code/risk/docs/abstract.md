@@ -1,6 +1,6 @@
 ### **Abstract Summary**
 
-#### DICABERS (Deep Insight Contextual Autoencoder Boost-Enhanced Risk Scoring)**
+#### **DICABERS (Deep Insight Contextual Autoencoder Boost-Enhanced Risk Scoring)**
 
 DICABERS presents a pioneering approach in risk assessment, integrating cutting-edge AI and ML technologies to analyze and score risks in complex, data-rich environments. This abstract outlines the methodologies and the unique synergy of components within DICABERS.
 
