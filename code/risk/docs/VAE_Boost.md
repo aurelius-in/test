@@ -62,4 +62,4 @@ Our approach comprises a sequential application of VAE for feature extraction an
 
 ### Conclusion
 
-By synergizing VAE and XGBoost, we have developed a robust and sophisticated framework for risk scoring. This approach not only enhances the accuracy of our risk assessments but also offers scalability and adaptability to various data types and structures. Our methodology stands as a testament to the power of integrating advanced AI techniques to tackle complex analytical challenges in risk assessment.
+By synergizing VAE and XGBoost, we have developed a robust and sophisticated framework for risk scoring. This approach not only enhances the accuracy of our risk assessments but also offers scalability and adaptability to various data types and structures, combining advanced AI techniques to tackle this complex  analytical challenge in risk assessment.
