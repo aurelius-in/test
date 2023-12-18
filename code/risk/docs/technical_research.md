@@ -13,3 +13,17 @@ A study analyzed the performance of GatorTronGPT, a biomedical transformer model
 
 **Implementation of LLMs in Healthcare Organizations:**
 The use of ChatGPT-like models, including GPT-4, in healthcare organizations has started gaining traction. Companies are integrating these models into medical note-taking tools and other healthcare applications. This showcases the growing acceptance and implementation of LLMs in practical healthcare environments, enhancing efficiency and potentially transforming patient care [6].
+
+### References
+
+- [1] A. Jenita Mary and S. P. Angelin Claret, "Title of the Paper," in *AIP Conference Proceedings*, 2022. [Online]. Available: [URL]. [Accessed: 13-Dec-2023].
+
+- [2] V. Rawte and G. Anuradha, "Fraud Detection in Health Insurance using Data Mining Techniques," presented at the [Conference Name], 2015. [Online]. Available: [URL]. [Accessed: 13-Dec-2023].
+  
+- [3] V. Kathiresan, Dr. S. Gunasekaran, and F. V. S. Faseela, "Health Insurance Claim Fraud Detection: A Survey," [Journal/Conference Name], year. [Online]. Available: [URL]. [Accessed: 14-Dec-2023].
+
+- [4] P. A. Ortega, C. J. Figureoa, and G. A. Ruz, "A Medical Claim Fraud/Abuse Detection System based on Data Mining: A case study in Chile," [Journal/Conference Name], year. [Online]. Available: [URL]. [Accessed: 14-Dec-2023].
+
+- [5] "C. Peng, X. Yang, A. Chen, K. E. Smith, N. PourNejatian, A. B. Costa, C. Martin, M. G. Flores, Y. Zhang, T. Magoc, G. Lipori, D. A. Mitchell, N. S. Ospina, M. M. Ahmed, W. R. Hogan, E. A. Shenkman, Y. Guo, J. Bian, and Y. Wu, "A study of generative large language model for medical research and healthcare," in npj Digital Medicine, vol. 6, no. 1, p. 210, Nov. 2023. doi: 10.1038/s41746-023-00958-w. [Online]. Available: https://www.nature.com/articles/s41746-023-00958-w. [Accessed: 12-Dec-2023].
+
+- [6] "Implementation of LLMs in Healthcare Organizations," [Online]. Available: https://www.nature.com/articles/s41746-023-00822-x. [Accessed: 11-Dec-2023].
