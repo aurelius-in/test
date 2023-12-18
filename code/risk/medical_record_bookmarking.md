@@ -1,10 +1,9 @@
-To create a slide for integrating AI/ML processes into medical record bookmarking, we can follow the format of the example slide you provided and incorporate the details from the Aha Scrum app notes. Here's how the slide can be structured:
-
 ### Problem Statement
 #### What
-- Inefficient and time-consuming manual process for gathering, optimizing, and bookmarking provider files with Member charts/records.
-- Difficulty in ensuring the right files are selected for optimization, leading to potential errors.
-- Significant time spent on manual optimization (30 min/record) and bookmarking (1 hour/record) tasks.
+What:
+- Manual, labor-intensive process for sorting, optimizing, and annotating provider files.
+- Risk of errors in manual selection of appropriate files for review.
+- High time investment: averaging 30 minutes for optimization and 1 hour for bookmarking each record.
 
 #### Why
 - Coordinators processed 359 records last year, with substantial time investment (1795 hours for optimization, 3590 hours for bookmarking).
