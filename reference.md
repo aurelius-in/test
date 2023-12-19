@@ -1,17 +1,12 @@
-Reference Letter Details
+Hi Jun,
 
-Dear Jun,
+I am followinf up about the Penn State reference letter. They have not received yours and still require an assessment from my current supervisor, focusing on our machine learning projects.
 
-Did you recieve any emails from PSU?  The reference needed for my Doctor of Engineering application at Penn State University specifically requires an assessment from a current supervisor. 
-The university is looking for your perspective on my work, particularly in our machine learning projects.
+Your insights are essential for my application. If accepted into the Doctoral program, I would begin on January 8th, and my research would complement our work at Optum.
 
-Your insights into my technical skills, problem-solving abilities, and contributions to our projects would greatly strengthen my application. 
-The program emphasizes the value of real-world experience making your insights particularly important.  
+I appreciate your support with this. Your guidance and endorsement mean a great deal to me, and I am grateful for the time you're taking to help advance my career.
 
-I truly appreciate your support.  If I am acceptated into PSU's Doctor of Engineering program, the spring semester will begin January 8th.  
-My research will support my work here at Optum.  
+If you need any details, please let me know.
 
-Your support in this pivotal step on my academic progress is deeply appreciated.  Please let me know if you have questions. 
-
-Respectfully,
+Best,
 Oliver
