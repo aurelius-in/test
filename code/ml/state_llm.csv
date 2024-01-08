@@ -1,0 +1,25 @@
+import pandas as pd
+
+# Assuming raw_labeled and raw_unlabeled are defined in a previous cell block
+# Load the datasets
+labeled_data = pd.read_csv(raw_labeled)
+unlabeled_data = pd.read_csv(raw_unlabeled)
+
+# Load the state mapping
+state_mapping = pd.read_csv(state_dir + 'LLM_state.csv')
+
+# Merge the mapping with the datasets
+labeled_data = labeled_data.merge(state_mapping[['State', 'Weight']], on='State', how='left')
+unlabeled_data = unlabeled_data.merge(state_mapping[['State', 'Weight']], on='State', how='left')
+
+# Replace the 'State' column with the 'Weight' column
+labeled_data['State'] = labeled_data['Weight']
+unlabeled_data['State'] = unlabeled_data['Weight']
+
+# Drop the extra 'Weight' column
+labeled_data.drop(columns=['Weight'], inplace=True)
+unlabeled_data.drop(columns=['Weight'], inplace=True)
+
+# You can print a few rows to verify the changes
+print(labeled_data.head())
+print(unlabeled_data.head())
