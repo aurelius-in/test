@@ -1,0 +1,62 @@
+KeyError                                  Traceback (most recent call last)
+/tmp/ipykernel_5849/920097505.py in ?()
+      2 status_mapping = pd.read_csv(mapping_dir + "LLM_status.csv")
+      3 
+      4 # Merge the mapping with the datasets
+      5 labeled_data = labeled_data.merge(status_mapping[['Most Recent Case Status', 'Weight']], on='Most Recent Case Status', how='left')
+----> 6 unlabeled_data = unlabeled_data.merge(status_mapping[['Most Recent Case Status', 'Weight']], on='Most Recent Case Status', how='left')
+      7 
+      8 # Replace the 'Most Recent Case Status' column with the 'Weight' column
+      9 labeled_data['Most Recent Case Status'] = labeled_data['Weight']
+
+/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/frame.py in ?(self, right, how, on, left_on, right_on, left_index, right_index, sort, suffixes, copy, indicator, validate)
+   9839         validate: str | None = None,
+   9840     ) -> DataFrame:
+   9841         from pandas.core.reshape.merge import merge
+   9842 
+-> 9843         return merge(
+   9844             self,
+   9845             right,
+   9846             how=how,
+
+/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/reshape/merge.py in ?(left, right, how, on, left_on, right_on, left_index, right_index, sort, suffixes, copy, indicator, validate)
+    144     copy: bool | None = None,
+    145     indicator: str | bool = False,
+    146     validate: str | None = None,
+    147 ) -> DataFrame:
+--> 148     op = _MergeOperation(
+    149         left,
+    150         right,
+    151         how=how,
+
+/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/reshape/merge.py in ?(self, left, right, how, on, left_on, right_on, axis, left_index, right_index, sort, suffixes, indicator, validate)
+    733         (
+    734             self.left_join_keys,
+    735             self.right_join_keys,
+    736             self.join_names,
+--> 737         ) = self._get_merge_keys()
+    738 
+    739         # validate the merge keys dtypes. We may need to coerce
+    740         # to avoid incompatible dtypes
+
+/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/reshape/merge.py in ?(self)
+   1217                     if lk is not None:
+   1218                         # Then we're either Hashable or a wrong-length arraylike,
+   1219                         #  the latter of which will raise
+   1220                         lk = cast(Hashable, lk)
+-> 1221                         left_keys.append(left._get_label_or_level_values(lk))
+   1222                         join_names.append(lk)
+   1223                     else:
+   1224                         # work-around for merge_asof(left_index=True)
+
+/anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/pandas/core/generic.py in ?(self, key, axis)
+   1774             values = self.xs(key, axis=other_axes[0])._values
+   1775         elif self._is_level_reference(key, axis=axis):
+   1776             values = self.axes[axis].get_level_values(key)._values
+   1777         else:
+-> 1778             raise KeyError(key)
+   1779 
+   1780         # Check for duplicates
+   1781         if values.ndim > 1:
+
+KeyError: 'Most Recent Case Status'
